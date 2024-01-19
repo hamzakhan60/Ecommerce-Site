@@ -1,0 +1,170 @@
+.navclass{
+   
+   padding-left: 40px;
+    background-color: transparent;
+}
+ol{
+    display: inline-flex;
+}
+.navdiv2{
+    margin-top: 20px;
+}
+ul
+{
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    opacity: 0.9;
+    display: inline-block;
+    font-size: 18px;
+    font-family: 'Merriweather', serif;
+    
+
+}
+.navdiv{
+    display: inline-flex;
+    background-color: white;
+}
+.fa-cart{
+    height: 30px;
+    width: 30px;
+    
+}
+.homediv{
+    display: inline-flex;
+    background:  rgba(221, 220, 220, 0.7) url(http://www.goeazyfacilities.com/wp-content/uploads/2020/04/leaves-free-img-300x237.png);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-size: 350px;
+    padding-bottom: 100px;
+ 
+    padding-top:150px ;
+}
+.divsecond{
+    align-items: center;
+    margin-left: 100px;
+    font-family: 'Merriweather', serif;
+}
+.button{
+    
+    width: 30.418%;
+    height: 3.25rem;
+    border-radius: 5px;
+    background-color: #8bc34a;
+    font-size: 15px;
+    color:white;
+    border:transparent;
+    font-weight: bolder;
+    margin-top: 15px;
+}
+.options{
+    background-color: black;
+    display: inline-flex;
+    margin:-10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+   
+   
+    font-family: 'Merriweather', serif;
+}
+.optionChild1{
+    color: white;
+    background-color: rgb(49, 49, 49);
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 20px;
+    padding-right: 50px;
+    border-radius: 5px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 12px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    display: inline-flex;
+}
+.sellingproductClass{
+    text-align: center;
+    padding-bottom: 50px;
+    padding-top: 100px;
+    font-size: 1rem;
+}
+.productclass{
+    font-family: 'Merriweather', serif;
+    padding-top: 20px;
+    }
+.row{
+    text-align: center;
+    padding-left:15px;
+    padding-right: 15px;
+}
+.add{
+    background-color: rgb(250, 247, 247);
+    display: inline-flex;
+    margin-top: 50px;
+    padding-top: 50px;
+    font-family: 'Merriweather', serif;
+    background-image: url(https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2021/03/basil-leaf.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 10%;
+    
+}
+.inneradd1{
+    background-image: url(https://prodentumano-1d466.kxcdn.com/upload/thumbnail/product/2023-05-27/op-1685175100.jpg);
+    background-color: white;
+    margin: 50px;
+    padding-left: 30px;
+     padding-right: 50px;
+    border-radius: 5px;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    padding-bottom: 25px;
+    margin-left:150px;
+    
+    
+}
+.inneradd2{
+    background-image: url(https://onempa.com/wp-content/uploads/2023/07/Butterhead-lettuce-1024x683.jpg);
+    background-color: white;
+    margin: 50px;
+    padding-left: 30px;
+    padding-right: 50px;
+    border-radius: 5px;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    margin-left:-8px ;
+    margin-right: -8px;
+}
+.inneradd3{
+    background-image:url(https://www.cybervitamins.com/wp-content/uploads/2019/07/product03-free-img.jpg);
+    background-color: white;
+    margin: 50px;
+     padding-left: 30px;
+     padding-right: 50px;
+    border-radius: 5px;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    margin-right: 200px;
+    padding-bottom: 150px;
+    
+}
+.addh1{
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: 5px;
+}
+.addp{
+    margin-top: 2px;
+    font-size: 13px;
+    word-spacing: 2px;
+    line-height: 25px;
+    
+}
+
+
+
