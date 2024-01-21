@@ -2,7 +2,12 @@
    
    padding-left: 40px;
     background-color: transparent;
+    
 }
+.navigation{
+    display: inline-flex;
+}
+
 ol{
     display: inline-flex;
 }
@@ -14,35 +19,43 @@ ul
     padding-top: 20px;
     padding-left: 10px;
     padding-right: 10px;
-    opacity: 0.9;
     display: inline-block;
-    font-size: 18px;
-    font-family: 'Merriweather', serif;
-    
-
 }
 .navdiv{
     display: inline-flex;
     background-color: white;
+    
+}
+.navdivChild-Child{
+    font-size: 15px;
+    text-decoration: none;
+    color: #000000;
+    transition-property: color;
+    transition-duration: 0.5s;
+    
+    }
+.navdivChild-Child:hover{
+    color:#8bc34a;
 }
 .fa-cart{
     height: 30px;
     width: 30px;
     
 }
-.homediv{
+.banner{
     display: inline-flex;
     background:  rgba(221, 220, 220, 0.7) url(http://www.goeazyfacilities.com/wp-content/uploads/2020/04/leaves-free-img-300x237.png);
     background-repeat: no-repeat;
     background-position: 100% 100%;
-    background-size: 350px;
+    background-size: 400px;
     padding-bottom: 100px;
- 
     padding-top:150px ;
+    
 }
-.divsecond{
+.bannerChild2{
     align-items: center;
     margin-left: 100px;
+    display: inline-block;
     font-family: 'Merriweather', serif;
 }
 .button{
@@ -56,48 +69,59 @@ ul
     border:transparent;
     font-weight: bolder;
     margin-top: 15px;
+    transition-property: background-color;
+    transition-duration: 1s;
+
 }
-.options{
+button:hover{
+    background-color: #befd75;
+
+}
+.relaiabilityBanner{
     background-color: black;
-    display: inline-flex;
-    margin:-10px;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-   
-   
+    display: flex;
+    margin:0px;
+    padding-left:50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-size:400px;
     font-family: 'Merriweather', serif;
 }
-.optionChild1{
+.relaiabilityBannerChild{
     color: white;
     background-color: rgb(49, 49, 49);
     margin-left: 10px;
     margin-right: 10px;
-    padding-left: 20px;
-    padding-right: 50px;
-    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 30px;
+    border-radius: 2px;
     margin-top: 40px;
     margin-bottom: 40px;
-    font-size: 12px;
-    padding-bottom: 30px;
+    font-size: 10px;
+    padding-bottom:30px;
     padding-top: 30px;
     display: inline-flex;
+    width: 250px;
 }
-.sellingproductClass{
+.bestSellingProductClass1,.trendingProductClass1{
     text-align: center;
     padding-bottom: 50px;
     padding-top: 100px;
     font-size: 1rem;
 }
-.productclass{
+.bestSellingProductClass2,.trendingProductClass2{
     font-family: 'Merriweather', serif;
     padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 70px;
+    padding-bottom: 20px;
     }
-.row{
+.bestSellingProductClass2Row,.trendingProductClass2Row{
     text-align: center;
     padding-left:15px;
     padding-right: 15px;
+    line-height: 5px;
 }
 .add{
     background-color: rgb(250, 247, 247);
@@ -109,6 +133,7 @@ ul
     background-position: center top;
     background-repeat: no-repeat;
     background-size: 10%;
+
     
 }
 .inneradd1{
@@ -162,9 +187,54 @@ ul
     margin-top: 2px;
     font-size: 13px;
     word-spacing: 2px;
-    line-height: 25px;
+    line-height: 25px;   
+}
+.offerBanner{
+    font-family: 'Merriweather', serif; 
+    background-color: #000000; 
+    display: inline-flex; 
+    text-align: center;
+     padding-top: 50px;
+      padding-bottom: 50px;
+}
+.review{
+    font-family:Arial, Helvetica,sans-serif; 
+    background:rgba(221, 220, 220, 0.7) url(http://www.goeazyfacilities.com/wp-content/uploads/2020/04/leaves-free-img-300x237.png);
+    background-repeat: no-repeat ; 
+    background-position: left top;
+     background-size: 350px; 
+     padding-top: 100px;
+   
+}
+.reviewClass1{
+    text-align: center; 
+    font-family: 'Merriweather', serif;
+}
+.reviewClass2{
+    display: inline-flex; 
+    align-items: baseline;
+    margin-left: 200px; 
+    margin-right: 100px; 
+    margin-top: 50px;
+}
+.reviewClass2Child1,.reviewClass2Child3{
+    width: 300px;
+     padding-top: 30px; 
+     height: 300px;
+      margin-right: 30px; 
+      border-radius: 5px; 
+      text-align: center; 
+      background-color: white;
+}
+.reviewClass2Child2{
+    width: 350px;
+     height: 400px;
+    margin-right: 30px;
+    border-radius: 5px;
+    background-image:  url(https://imagedelivery.net/F5KOmplEz0rStV2qDKhYag/66325229-75d7-466e-7366-ceefbf7e6c00/tn) ;
+    background-position: center center;
+    text-align: center;
     
 }
-
 
 

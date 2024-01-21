@@ -8,7 +8,7 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Roboto:ital,wght@0,100;0,300;0,500;1,100;1,300;1,400;1,500;1,700&family=Ubuntu&display=swap" rel="stylesheet">
-
+    <title></title>
 <style>
    .groceries{
     padding-top: 100px;
@@ -18,33 +18,86 @@
         margin-left:200px;
        
     }
+    .navclass{
+   
+   padding-left: 40px;
+    background-color: transparent;
+    
+}
+
+ol{
+    display: inline-flex;
+}
+.navdiv2{
+    margin-top: 20px;
+}
+ul
+{
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: inline-block;
+}
+.navdiv{
+    display: inline-flex;
+    background-color: white;
+    
+}
+.navdivChild-Child{
+    font-size: 15px;
+    text-decoration: none;
+    color: #000000;
+    transition-property: color;
+    transition-duration: 0.5s;
+    
+    }
+.navdivChild-Child:hover{
+    color:#8bc34a;
+}
+.fa-cart{
+    height: 30px;
+    width: 30px;
+    
+}
+.changePageButton{
+    width: 35px; 
+    height: 35px; 
+    font-size: 15px; color: #8bc34a; 
+    border-color: #8bc34a;
+    transition-duration: 1s;
+    transition-property: backgroun-color,color;
+    
+}
+.changePageButton:hover{
+    background-color: #8bc34a;
+    color:white;
+}
    
 </style>
 </head>
 <body>
-    <div style="display: inline-flex; padding-left: 20px; font-family: 'Merriweather';">
-        <img src="organic-store-logo5.svg" alt="loding" height="auto" width="150px">
-        <div style="padding-top: 20px; padding-right: 50px;">
-            <ol style="display: inline-flex;">
-                <ul><a href="">Everything</a></ul>
-                <ul><a href="">Groceries</a></ul>
-                <ul><a href="">Juice</a></ul>
+    <div class="navigation" style="display: inline-flex; padding-left: 20px; font-family: Arial, Helvetica, sans-serif;">
+        <a href="index.html"><img src="organic-store-logo5.svg" alt="loding" height="auto" width="150px"></a>
+        <div class="navdiv">
+            <ol class="navdivChild" style="display: inline-flex;">
+                <ul><a class="navdivChild-Child"  href="">Everything</a></ul>
+                <ul><a class="navdivChild-Child"  href="groceries.html">Groceries</a></ul>
+                <ul><a class="navdivChild-Child"  href="">Juice</a></ul>
             </ol>
         </div>
-        <div style="padding-top: 20px; margin-left:320px; text-decoration: none;">
-            <ol style="display: inline-flex;">              
-                <ul><a href="">About</a></ul>
-                <ul><a href="">Contact</a></ul>
-                <ul><a href="" style="color: green; font-weight: 8px;">$0.00</a></ul>
-                <ul><i class="fa-solid fa-cart-shopping fa-lg" style="color: #1f5125;"></i>
-                <i class="fa-solid fa-user fa-lg " style="color: #000000; padding-left: 20px;"></i>
+        <div class="navdiv" style="margin-left: 575px;" >
+            <ol class="navdivChild" style="display: inline-flex; ">              
+                <ul><a class="navdivChild-Child"  href="">About</a></ul>
+                <ul><a  class="navdivChild-Child"  href="">Contact</a></ul>
+                <ul><a  class="navdivChild-Child" style=" color: #8bc34a; font-weight: 6px;" href="" >$0.00</a></ul>
+                <ul><a  class="navdivChild-Child" href=""><i class="fa-solid fa-cart-shopping fa-lg" style="color:#8bc34a"></i></a>
+                <a  class="navdivChild-Child" href=""><i class="fa-solid fa-user fa-lg " style="color: #000000; padding-left: 20px;"></i></a>
             </ol>
         </div>
-
     </div>
 
    <div class="groceries" style="display: inline-flex; background-color: #f4f8f4;">
-   <div class="sidelisting" style="padding-left: 80px;  border: 0.2px solid; border-left:grey;border-bottom: transparent;border-top: transparent; padding-right: 50px; padding-top: 20px;">
+   <div class="sidelisting" style="padding-left: 80px;  border: 0.25px; border-style: outset; border-right-color:rgb(225, 222, 222);border-bottom: transparent;border-top: transparent; padding-right: 50px; padding-top: 20px;">
     <div><input type="text" placeholder="Search Products..." style="height: 30px; width: 180px; border-width: 1px; font-size: 15px;"></div>
     <div style="padding-top: 20px;  font-family: 'Merriweather', serif;"><h2>Filter By Price</h2>
     <input type="range" min="0" max="100" value="100" style="width: 225px; "></div>
@@ -90,39 +143,39 @@
             <tr>
                 <td style="padding-right: 20px;" >
                     <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/coffee-asorted-400x400.jpg" alt="loding" width="250px" height="250px" >
-                   <div style="text-align: center; line-height: 5px;">  
+                   <div style="text-align: center; line-height: 0px;">  
                     <p style="color: grey; font-size: 18px;">Groceries</p>
-                        <h3>Assorted Coffee</h3>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <h4>$35.00</h4></div>
+                        <h4>Assorted Coffee</h4>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey ;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color: grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <h5>$35.00</h5></div>
                 </td>
                 <td style="padding-right: 20px;">
                     <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/cashew-butter-500-600x600.jpg" alt="loding" width="250px" height="250px" >
-                   <div style="text-align: center; line-height: 5px;">  
+                   <div style="text-align: center; line-height: 0px;">  
                     <p style="color: grey; font-size: 18px;">Groceries</p>
-                        <h3>Cashew Butter</h3>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <h4><del style="color: grey;">$35.00</del>$25.00</h4></div>
+                        <h4>Cashew Butter</h4>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <h5><del style="color: grey;">$35.00</del>$25.00</h5></div>
                 </td>
                 <td >
                     <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/diabetic-cookies-400x400.jpg" alt="loding" width="250px" height="250px" >
-                   <div style="text-align: center; line-height: 5px;">  
+                   <div style="text-align: center; line-height: 0px;">  
                     <p style="color: grey; font-size: 18px;">Groceries</p>
-                        <h3>Diabetic Cookies</h3>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <h4><del style="color: grey">$35.00</del>$25.00</h4></div>
+                        <h4>Diabetic Cookies</h4>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <h5><del style="color: grey">$35.00</del>$25.00</h5></div>
                 </td>
            
            
@@ -133,85 +186,85 @@
             <tr >
                 <td style="padding-right: 20px;" >
                     <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/organic-honey-400x400.jpg" alt="loding" width="250px" height="250px" >
-                   <div style="text-align: center; line-height: 5px;">  
+                   <div style="text-align: center; line-height: 0px;">  
                     <p style="color: grey; font-size: 18px;">Groceries</p>
-                        <h3>Fresh Organic Honey</h3>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <h4>$34.00</h4></div>
+                        <h4>Fresh Organic Honey</h4>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <h5>$34.00</h5></div>
                 </td>
                 <td style="padding-right: 20px;">
                     <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/sanitizer-400x400.jpg" alt="loding" width="250px" height="250px" >
-                   <div style="text-align: center; line-height: 5px;">  
+                   <div style="text-align: center; line-height: 0px;">  
                     <p style="color: grey; font-size: 18px;">Groceries</p>
-                        <h3>Hand Sanitizer</h3>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <h4>$15.00</h4></div>
+                        <h4>Hand Sanitizer</h4>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <h5>$15.00</h5></div>
                 </td>
                 <td >
                     <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/red-chillies-400x400.jpg" alt="loding" width="250px" height="250px" >
-                   <div style="text-align: center; line-height: 5px;">  
+                   <div style="text-align: center; line-height: 0px;">  
                     <p style="color: grey; font-size: 18px;">Groceries</p>
-                        <h3>Handpicked Red Chillies</h3>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <h4>$19.00</h4></div>
+                        <h4>Handpicked Red Chillies</h4>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <h5>$19.00</h5></div>
                 </td>
             </tr>
             <tr >
                 <td style="padding-right: 20px;" >
                     <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/edible-oil-400x400.jpg" alt="loding" width="250px" height="250px" >
-                   <div style="text-align: center; line-height: 5px;">  
+                   <div style="text-align: center; line-height: 0px;">  
                     <p style="color: grey; font-size: 18px;">Groceries</p>
-                        <h3>Natural Extracted Edible Oil</h3>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <h4><del style="color: grey;">$34.00</del>$24.00</h4></div>
+                        <h4>Natural Extracted Edible Oil</h4>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <h5><del style="color: grey;">$34.00</del>$24.00</h5></div>
                 </td>
                 <td style="padding-right: 20px;">
                     <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/face-wash-400x400.jpg" alt="loding" width="250px" height="250px" >
-                   <div style="text-align: center; line-height: 5px;">  
+                   <div style="text-align: center; line-height: 0px;">  
                     <p style="color: grey; font-size: 18px;">Groceries</p>
-                        <h3>Organic Face Scrub</h3>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <h4>$35.00</h4></div>
+                        <h4>Organic Face Scrub</h4>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <h5>$35.00</h5></div>
                 </td>
                 <td >
                     <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/pulses-400x400.jpg" alt="loding" width="250px" height="250px" >
-                   <div style="text-align: center; line-height: 5px;">  
+                   <div style="text-align: center; line-heigt:0px;">  
                     <p style="color: grey; font-size: 18px;">Groceries</p>
-                        <h3>Pulse Organic Farm</h3>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: #000000;"></i>
-                        <h4>$15.00</h4></div>
+                        <h4>Pulse Organic Farm</h4>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                        <h5>$15.00</h5></div>
                 </td>
             </tr>
         </table>
     </div>
     <div style="margin-top: 50px; margin-left: 30px;">
-        <button style="width: 35px; height: 35px; font-size: 15px; color: #8bc34a; border-color: #8bc34a;">1</button>
-        <button style="width: 35px; height: 35px; font-size: 15px; color: #8bc34a; border-color: #8bc34a;">2</button>
-        <button style="width: 35px; height: 35px; font-size: 15px; color: #8bc34a; border-color: #8bc34a;">></button>
+        <button  class="changePageButton">1</button>
+        <button class="changePageButton"  >2</button>
+        <button  class="changePageButton" >></button>
     </div>
     </div>
 
