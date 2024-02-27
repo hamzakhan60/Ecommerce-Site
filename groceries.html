@@ -1,277 +1,1245 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Roboto:ital,wght@0,100;0,300;0,500;1,100;1,300;1,400;1,500;1,700&family=Ubuntu&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Roboto:ital,wght@0,100;0,300;0,500;1,100;1,300;1,400;1,500;1,700&family=Ubuntu&display=swap"
+        rel="stylesheet">
     <title></title>
-<style>
-   .groceries{
-    padding-top: 100px;
-   
-   }
-   .slidelisting{
-        margin-left:200px;
+    <style>
+        .button {
+
+            width: 100px;
+            height: 50px;
+            border-radius: 5px;
+            background-color: #8bc34a;
+            font-size: 15px;
+            color: white;
+            border: transparent;
+            font-weight: bolder;
+            margin-top: -5px;
+            transition-property: background-color;
+            transition-duration: 1s;
+
+        }
+
+        button:hover {
+            background-color: #befd75;
+
+        }
+
+        .groceries {
+            padding-top: 100px;
+
+        }
+
+        .slidelisting {
+            margin-left: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            width: max-content;
+
+        }
+
+        .navclass {
+
+            padding-left: 40px;
+            background-color: transparent;
+
+        }
+
+        ol {
+            display: inline-flex;
+        }
+
+        .navdiv2 {
+            margin-top: 20px;
+        }
+
+        ul {
+            padding-top: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+            display: inline-block;
+        }
+
+        .navdiv {
+            display: inline-flex;
+            background-color: white;
+
+        }
+
+        .navdivChild-Child {
+            font-size: 15px;
+            text-decoration: none;
+            color: #000000;
+            transition-property: color;
+            transition-duration: 0.5s;
+
+        }
+
+        .navdivChild-Child:hover {
+            color: #8bc34a;
+        }
+
+        .fa-cart {
+            height: 30px;
+            width: 30px;
+
+        }
+
+        .changePageButton {
+            width: 40px;
+            height: 40px;
+            font-size: 15px;
+            color: #8bc34a;
+            border-color: #8bc34a;
+            background-color: transparent;
+            border-width: 1px;
+            transition-duration: 1s;
+            transition-property: backgroun-color, color;
+
+        }
+
+        .changePageButton:hover {
+            background-color: #8bc34a;
+            color: white;
+        }
+
+        #changePage1 {
+            background-color: #8bc34a;
+            color: white;
+        }
+
+        input[type=range] {
+            box-sizing: border-box;
+            appearance: none;
+            width: 260px;
+            margin: 0;
+            padding: 0 0px;
+            /* Add some L/R padding to ensure box shadow of handle is shown */
+
+            border: 0;
+            border-radius: 1px;
+            outline: none;
+            background: linear-gradient(#8bc34a, #8bc34a) no-repeat center;
+            /* Use a linear gradient to generate only the 2px height background */
+            background-size: 100% 2px;
+            pointer-events: none;
+
+            &:active,
+            &:focus {
+                outline: none;
+            }
+
+            &::-webkit-slider-thumb {
+                height: 20px;
+                width: 20px;
+                border-radius: 28px;
+                background-color: #fff;
+                position: relative;
+                margin: 5px 0;
+                /* Add some margin to ensure box shadow is shown */
+                cursor: pointer;
+                appearance: none;
+                background-color: #8bc34a;
+                pointer-events: all;
+                box-shadow: 0 1px 4px 0.5px rgba(0, 0, 0, 0.25);
+
+            }
+        }
+
+        .multi-range {
+            position: relative;
+            height: 50px;
+
+            input[type=range] {
+                position: absolute;
+
+                &:nth-child(1) {
+                    &::-webkit-slider-thumb::before {
+                        background-color: red;
+                    }
+                }
+
+                &:nth-child(2) {
+                    background: none;
+
+                    &::-webkit-slider-thumb::before {
+                        background-color: grey;
+                    }
+                }
+            }
+        }
+
+        #minOutput,
+        #maxOutput {
+            width: 49px;
+            height: 40px;
+            font-size: 17px;
+            border-color: rgb(196, 196, 196);
+            border-radius: 5px;
+            border-width: 1px;
+            margin: 5px;
+
+
+
+        }
+
+        .filterDiv {
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+            align-items: center;
+            width: 200px;
+            height: 250px;
+        }
+
+        .buttonDiv {
+            margin-left: 200px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .navigation {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 100px;
+            background-color: white;
+        }
+
+        .navdivChild1,
+        .navdivChild {
+            padding-top: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .navdiv {
+            background-color: transparent;
+        }
+
+        .navdivChild-Child {
+            font-size: 15px;
+            text-decoration: none;
+            color: #000000;
+            transition-property: color;
+            transition-duration: 0.5s;
+
+        }
+
+        .navdivChild-Child:hover {
+            color: #8bc34a;
+        }
+
+        .fa-bars {
+            visibility: hidden;
+        }
+
+        .fa-cart {
+            height: 30px;
+            width: 30px;
+
+        }
+
+        @media screen and (max-width:983px) {
+            .navdivChild-Child {
+                display: none;
+            }
+
+            .fa-bars,
+            .fa-cart,
+            .cartTotal {
+                display: contents;
+            }
+        }
+
+        .footerDiv div a {
+            text-decoration: none;
+            color: rgb(255, 255, 255, 0.5);
+            line-height: 25px;
+        }
+
+        .footerDiv div p {
+            line-height: 25px;
+            color: rgb(255, 255, 255, 0.5);
+        }
+
+        .footerDiv div h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 20px;
+        }
+
+        .footerDiv {
+            padding: 80px;
+        }
+
+        .footerDiv div li a {
+            transition-duration: 1s;
+            transition-property: color;
+        }
+
+        .footerDiv div li a:hover {
+            color: #8bc34a;
+        }
+
+        .quickLinks li a {
+            color: #8bc34a;
+        }
+
+        .footerDiv2 div h4 {
+            color: rgb(255, 255, 255, 0.5);
+        }
+
+        .footerDiv2 div li {
+            display: inline-flex;
+        }
+
+        .footerDiv2 div li a {
+            display: inline-flex;
+            color: rgb(255, 255, 255, 0.5);
+            text-decoration: none;
+            padding: 10px;
+            transition-duration: 1s;
+            transition-property: color;
+        }
+
+        .footerDiv2 div li a:hover {
+            color: #8bc34a;
+        }
+
+        .footerDiv2 {
+            border-width: 1px;
+            border-top-color: rgb(255, 255, 255, 0.5);
+            ;
+
+            border-style: solid;
+        }
+
+        div img {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        div img.zoomed {
+            transform: scale(1.5);
+            cursor: zoom-out;
+        }
+
+        .parentDiv {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: start;
+            font-family: " Open Sans,sans-serif";
+            padding-bottom: 60px;
+            padding-top: 100px;
+        }
+
+        @media screen and (max-width:987px) {
+            .parentDiv {
+                flex-wrap: wrap;
+            }
+        }
+
+        .child1,
+        .child2 {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        .child1 {
+            height: 100%;
+            width: 100%;
+            flex-shrink: 1;
+        }
+
+        .button {
+
+            width: 100px;
+            height: 50px;
+            border-radius: 5px;
+            background-color: #8bc34a;
+            font-size: 15px;
+            color: white;
+            border: transparent;
+            font-weight: bolder;
+            margin-top: -5px;
+            transition-property: background-color;
+            transition-duration: 1s;
+
+        }
+
+        .button:hover {
+            background-color: #befd75;
+
+        }
+
+        .addCartButton input[type='button'] {
+            width: 50%;
+            height: 30px;
+            margin-left: 20px;
+
+        }
+
+        .addCartButton {
+            padding-top: 20px;
+            border-bottom: 1px solid rgb(165, 165, 165);
+            padding-bottom: 20px;
+            width: 90%;
+        }
+
+        .addCartButton input[type='Number'] {
+            width: 50px;
+            height: 25px;
+            text-align: center;
+            border: transparent;
+
+        }
+
+        .categories a {
+            text-decoration: none;
+            color: #8bc34a;
+            font-size: 15px;
+            font-family: Open Sans, sans-serif;
+        }
+
+        .categories {
+            padding-top: 10px;
+            font-family: Open Sans, sans-serif;
+        }
+
+        .h2Div p {
+            font-size: 25px;
+            font-weight: 5px;
+            padding-left: 5px;
+            margin-top: -5px;
+            font-family: Open Sans, sans-serif;
+        }
+
+        .reviewButtonDiv {
+            border-top: 1px solid rgb(165, 165, 165);
+            margin-left: 50px;
+            margin-right: 50px;
+
+        }
+
+        @media screen and (max-width:559px) {
+            .reviewButtonDiv {
+                display: flex;
+                flex-direction: column;
+                justify-content: left;
+                align-items: flex-start;
+
+            }
+
+            .reviewButtonDiv input[value='Description'] {
+                padding-bottom: 10px;
+            }
+
+            .relatedProductsDiv table tr {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .child2 h1 {
+                font-size: 25px;
+            }
+
+            .addCartButton input[type='button'] {
+                width: 50%;
+                height: 30px;
+                margin-left: 20px;
+
+            }
+
+        }
+
+        .reviewButtonDiv .button1 {
+            background-color: transparent;
+            border: transparent;
+            font-size: 16px;
+            font-weight: bold;
+            color: rgb(77, 77, 77);
+            padding-top: 10px;
+            cursor: pointer;
+            transition-duration: 1s;
+        }
+
+        .reviewButtonDiv .button1:hover {
+            color: rgb(116, 115, 115);
+            ;
+        }
+
+        .reviewButtonDiv input[value='Description'] {
+            border-top: 3px solid #8bc34a;
+            border-right: 1px dotted black;
+        }
+
+        body {
+            background-color: #F8F6F3;
+        }
+
+        .ratingStarDiv i {
+            cursor: pointer;
+        }
+
+        .groceries {
+            display: flex;
+        }
+
+        .groceries2 {
+            display: none;
+        }
+
+        @media screen and (max-width:1017px) {
+            .footerDiv {
+                flex-wrap: wrap;
+            }
+        }
+
+        td img {
+            cursor: pointer;
+        }
+
+        table tr td div h4 {
+            cursor: pointer;
+        }
+
+        table tr td h4 {
+            cursor: pointer;
+        }
+
+        .viewCart {
+            background-color: transparent;
+            color: gray;
+            text-decoration: underline;
+            border: transparent;
+            font-size: 18px;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+
+        .viewCart:hover {
+            color: black;
+        }
+
+
+        .cartBox {
+
+            display: none;
+            flex-direction: row;
+            justify-content: right;
+            align-items: center;
+            animation: slide 0.5s ease-in-out reverse;
+            position: absolute;
+            left: 875px;
+            
+            
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+
+            }
+
+            100% {
+                transform: translateX(500px);
+            }
+        }
+
        
-    }
-    .navclass{
-   
-   padding-left: 40px;
-    background-color: transparent;
-    
-}
 
-ol{
-    display: inline-flex;
-}
-.navdiv2{
-    margin-top: 20px;
-}
-ul
-{
-    padding-top: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
-    display: inline-block;
-}
-.navdiv{
-    display: inline-flex;
-    background-color: white;
-    
-}
-.navdivChild-Child{
-    font-size: 15px;
-    text-decoration: none;
-    color: #000000;
-    transition-property: color;
-    transition-duration: 0.5s;
-    
-    }
-.navdivChild-Child:hover{
-    color:#8bc34a;
-}
-.fa-cart{
-    height: 30px;
-    width: 30px;
-    
-}
-.changePageButton{
-    width: 35px; 
-    height: 35px; 
-    font-size: 15px; color: #8bc34a; 
-    border-color: #8bc34a;
-    transition-duration: 1s;
-    transition-property: backgroun-color,color;
-    
-}
-.changePageButton:hover{
-    background-color: #8bc34a;
-    color:white;
-}
-   
-</style>
+        .head {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-family: Open Sans, sans-serif;
+            border-bottom: 1px solid #DDDDDD;
+            
+            font-size: 18px;
+            padding-left: 10px;
+
+        }
+
+        .cartBoxChild {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: normal;
+            font-family: Open Sans, sans-serif;
+            width: 450px;
+            height: 600px;
+            
+            background-color: rgb(255, 255, 255);
+        }
+
+        .button {
+
+            width: 150px;
+            height: 3.25rem;
+            border-radius: 5px;
+            background-color: #8bc34a;
+            font-size: 15px;
+            color: white;
+            border: transparent;
+            font-weight: bolder;
+            transition-property: background-color;
+            transition-duration: 1s;
+
+        }
+
+        .button:hover {
+            background-color: #befd75;
+
+        }
+
+        .cartBoxProducts {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            /* overflow-y: scroll; */
+            
+            
+        }
+        .cartBoxChild1{
+            
+            overflow-y: scroll;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="navigation" style="display: inline-flex; padding-left: 20px; font-family: Arial, Helvetica, sans-serif;">
-        <a href="index.html"><img src="organic-store-logo5.svg" alt="loding" height="auto" width="150px"></a>
+    
+    <div style="position: relative;">
+    <div class="cartBox">
+        <div class="cartBoxChild">
+            <div class="cartBoxChild1">
+                <div class="head">
+                    <p>Shopping Cart</p>
+                    <i class="fa-solid fa-xmark fa-lg"
+                        style="padding-right: 10px; color: #000000; cursor: pointer;"></i>
+                </div>
+                <div class="cartBoxProducts">
+                    <div class="cartBoxProductsChild" style="border-bottom: 1px solid #DDDDDD; height: 100px; width: 90%; align-self:center; margin-top: 20px; display:flex; flex-direction: row; justify-content:space-between;">
+                        <div style="display:flex; flex-direction: row; justify-content:left;">
+                            <div class="productImageDiv" style="width:100px; height: 110px; padding-top: 5px; cursor: pointer;">
+                                <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/edible-oil.jpg"
+                                    alt="" width="80%" height="70%">
+                            </div>
+                            <div class="productNameInCartBox">
+                                <div class="productNameInCartBoxChild"><p style="cursor: pointer;">Natural Extracted Edible Oil</p></div>
+                                <div class="productDetailInCartBox" style="display:inline-flex; margin-top: -15px;  ">
+                                    <p class="catBoxProductQuantity">1</p><p>x</p>
+                                    <p class="catBoxProductTotal" style="padding-left: 6px;">$25.00</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="closeBtn" style=" display: flex ; flex-direction: column; justify-content: center;">
+                            <i class="fa-solid fa-xmark fa-lg "
+                                style="padding-right: 10px; color: #9e9c9c;cursor: pointer;"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="noPrdouctInCart" style="padding-top: 150px; text-align: center;">No Product in Cart</div>
+            </div>
+            <div class="cartBoxChild2" style=" width: 100%; height: 160px; align-self: center; display: none; ">
+                <div
+                    style="border-bottom: 1px solid  #DDDDDD; border-top:1px solid  #DDDDDD ; height: 40px;display: flex; flex-direction: row; justify-content: space-between; align-items: center; padding-left: 15px; padding-right: 15px;">
+                    <p>Subtotal:</p>
+                    <p class="subTotal">$25.00</p>
+                </div>
+                <div style="height: 50px; display: flex; align-items: center;justify-content: center; ">
+                    <input type="button" class="button" value="VIEW CART" id="" style="width: 95%; height: 80%;">
+                </div>
+                <div style="height: 50px;  display: flex; align-items: center;justify-content: center; ">
+                    <input type="button" class="button" value="Check OUT" id="" style="width: 95%; height: 80%;">
+                </div>
+            </div>
+            <div class="continueShoopintButton"
+                style="height: 100px;  display: flex; align-items: center;justify-content: center;">
+                <input type="button" class="button" value="CONTINUE SHOPPING" id="" style="width: 95%; height: 50%;">
+            </div>
+        </div>
+
+
+    </div>
+    <div class="navigation" style="font-family: Arial, Helvetica, sans-serif;">
+
         <div class="navdiv">
-            <ol class="navdivChild" style="display: inline-flex;">
-                <ul><a class="navdivChild-Child"  href="">Everything</a></ul>
-                <ul><a class="navdivChild-Child"  href="groceries.html">Groceries</a></ul>
-                <ul><a class="navdivChild-Child"  href="">Juice</a></ul>
+            <ol class="navdivChild1">
+                <ul><a href="index.html"><img id="mainPage" src="organic-store-logo5.svg" alt="loding" height="auto"
+                            width="150px"></a>
+                </ul>
+                <ul><a class="navdivChild-Child" href="">Everything</a></ul>
+                <ul><a class="navdivChild-Child" id="groceriesBtn" href="groceries.html">Groceries</a></ul>
+                <ul><a class="navdivChild-Child" href="">Juice</a></ul>
             </ol>
         </div>
-        <div class="navdiv" style="margin-left: 575px;" >
-            <ol class="navdivChild" style="display: inline-flex; ">              
-                <ul><a class="navdivChild-Child"  href="">About</a></ul>
-                <ul><a  class="navdivChild-Child"  href="">Contact</a></ul>
-                <ul><a  class="navdivChild-Child" style=" color: #8bc34a; font-weight: 6px;" href="" >$0.00</a></ul>
-                <ul><a  class="navdivChild-Child" href=""><i class="fa-solid fa-cart-shopping fa-lg" style="color:#8bc34a"></i></a>
-                <a  class="navdivChild-Child" href=""><i class="fa-solid fa-user fa-lg " style="color: #000000; padding-left: 20px;"></i></a>
+        <div class="navdiv">
+            <ol class="navdivChild">
+                <ul><a class="navdivChild-Child" href="">About</a></ul>
+                <ul><a class="navdivChild-Child" href="">Contact</a></ul>
+                <ul><a class=" cartTotal"
+                        style=" color: #8bc34a; font-weight:bold; text-decoration: none; font-size: 18px; cursor: pointer;"
+                        >$0.00</a></ul>
+                <ul>
+                    <div class="cartBucket" style="position: relative; cursor: pointer;"><i class="fa-solid fa-bucket fa-lg" style="color: #8bc34a;"></i>
+                        <input class="cartQuantity" type="button" value="0"
+                            style=" position: absolute;bottom: 8px; background-color: #8bc34a; border:transparent; border-radius: 50%; font-weight: bold;">
+                    </div>
+                </ul>
+
+                <ul><a class="navdivChild-Child" href=""><i class="fa-solid fa-user fa-lg "
+                            style="color: #000000; padding-left: 20px;"></i></a><i class="fa-solid fa-bars fa-2xl"
+                        style="color: #8bc34a;"></i></ul>
             </ol>
         </div>
+
     </div>
 
-   <div class="groceries" style="display: inline-flex; background-color: #f4f8f4;">
-   <div class="sidelisting" style="padding-left: 80px;  border: 0.25px; border-style: outset; border-right-color:rgb(225, 222, 222);border-bottom: transparent;border-top: transparent; padding-right: 50px; padding-top: 20px;">
-    <div><input type="text" placeholder="Search Products..." style="height: 30px; width: 180px; border-width: 1px; font-size: 15px;"></div>
-    <div style="padding-top: 20px;  font-family: 'Merriweather', serif;"><h2>Filter By Price</h2>
-    <input type="range" min="0" max="100" value="100" style="width: 225px; "></div>
-    <input type="text" style="width: 40px; height:35px; margin-left: 120px; margin-top: 20px;"><input type="text" style="width: 40px; height:35px; margin-left: 10px;">
-   <div style=" margin-top: 80px; font-family: 'Merriweather', serif;">
-    <table>
-        <tr >
-            <td>
-                <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/edible-oil-400x400.jpg" alt="loding" width="230px" height="230px">
-                <h4 style="color:green; margin-bottom: -2px;">Natural Extracted Edilbile Oil</h4>
-                <p ><del style="color: grey; ">$34.00</del>$25.00</p>
-            </td>
-        </tr>
-        <tr style="margin-top: 20px;">
-            <td>
-                <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/sanitizer-300x300.jpg" alt="loding" width="230px" height="230px">
-                <h4 style="color:green; margin-bottom: -2px;">Hand Sanitizer</h4>
-                <p >$15.00</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/wheat-300x300.jpg" alt="loding" width="230px" height="230px">
-                <h4 style="color:green ;margin-bottom: -2px;">Wheat From Organic Farm</h4>
-                <p >$34.00</p>
-            </td>
-        </tr>
-    </table>
-   </div>
-</div>
-<div style="margin-left: 80px; padding-right: 50px;">
+   
     <div>
-        <p style="color: grey; font-size: 18px;">Home / Groceries</p>
-        <h1 style="font-size: 60px; color: #8bc34a ;font-family: 'Merriweather', serif;">Groceries</h1>
-        <p style="line-height: 25px;  padding-top: 20px; font-size: 18px; font-family: Arial, Helvetica, sans-serif;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim, velit et luctus interdum, est quam scelerisque tellus, eget luctus mi diam vitae erat. Praesent porttitor lacus vitae dictum posuere. Suspendisse elementum metus ac dolor tincidunt, eu imperdiet nisi dictum.</p>
-       <div style="display: inline-flex;">
-        <p style="padding-top: 50px; font-size: 18px; font-family: Arial, Helvetica, sans-serif;">Showing Result</p>
-        <!-- <button type="menu" style="width: 150px; height: 40px; font-size: 15px; color: grey; text-align: left;">Default sorting</button>
+        <div class="groceries"
+            style="  flex-direction: row; justify-content: center; align-items:start; background-color:#F8F6F3;">
+            <div class="sidelisting"
+                style="padding-left: 50px;  border: 0.25px; border-style: outset; border-right-color:rgb(225, 222, 222);border-bottom: transparent;border-top: transparent; padding-right: 50px; padding-top: 10px;">
+                <div style="display: flex; flex-direction: row; justify-content:flex-start; align-items: flex-end;">
+                    <input class="SearchProductInput" type="text" placeholder="Search Products..."
+                        style="height: 43px; width: 221px; border-width: 0.5px; font-size: 20px; border-color:#fff;">
+                    <button id="searchButton" class="button"
+                        style="width:30px; height: 50px; margin-left:10px ">></button>
+                </div>
+
+                <div class="filterDiv">
+                    <div
+                        style="margin-top: 20px;  font-family: 'Merriweather', serif; width: 300px; text-align:left; padding-left: 100px; ">
+                        <h2 style="font-size: 30px;">Filter By Price</h2>
+                    </div>
+                    <div class="multi-range" style="margin-right: 200px;">
+
+                        <input type="range" min="0" max="40" value="0" id="lower">
+                        <input type="range" min="0" max="40" value="40" id="upper">
+
+
+                    </div>
+                    <div
+                        style="width: 300px; height: 50px; display: flex; flex-direction: row; justify-content: end; align-items: flex-end; ">
+                        <input type="text" value="$0" id="minOutput">
+                        <input type="text" value="$40" id="maxOutput">
+                    </div>
+                    <div class="buttonDiv">
+                        <button class="button">Reset</button>
+                    </div>
+
+                </div>
+                <div style="display: flex; flex-direction: column; justify-content: space-evenly; align-items: normal;">
+                    <div style="font-size: 20px; padding-bottom: 10px;"><a href="groceries.html"
+                            style="color:#8bc34a;text-decoration: none;">Groceries</a>(9)</div>
+                    <div style="font-size: 20px;"><a href="juice.html"
+                            style="color:#8bc34a; text-decoration: none; ">Juice</a>(9)</div>
+                </div>
+                <div style=" margin-top: 50px; font-family: 'Merriweather', serif;">
+                    <table>
+                        <tr>
+                            <td>
+                                <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/edible-oil-400x400.jpg"
+                                    alt="loding" width="230px" height="230px">
+                                <h4 style="color:green; margin-bottom: -2px;">Natural Extracted Edilbile Oil</h4>
+                                <p><del style="color: grey; ">$34.00</del>$25.00</p>
+                            </td>
+                        </tr>
+                        <tr style="margin-top: 20px;">
+                            <td>
+                                <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/sanitizer-300x300.jpg"
+                                    alt="loding" width="230px" height="230px">
+                                <h4 style="color:green; margin-bottom: -2px;">Hand Sanitizer</h4>
+                                <p>$15.00</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/wheat-300x300.jpg"
+                                    alt="loding" width="230px" height="230px">
+                                <h4 style="color:green ;margin-bottom: -2px;">Wheat From Organic Farm</h4>
+                                <p>$34.00</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="noProductFound" style="display: none; width: 60%; margin-left: 100px;">
+                <h1 style="font-size: 3.2rem; color: #8bc34a; font-family: 'Merriweather', serif;">Search result:
+                    "Search"</h1>
+                <div
+                    style="border:1px solid #2263d3; padding: 20px; font-size: 18px; background-color: #F4F8FF; font-family: Open Sans,sans-serif;">
+                    <i class="fa-solid fa-circle-info fa-lg" style="color: #2263d3; padding-right: 10px;"></i>
+                    No products were found matching your selection.
+                </div>
+            </div>
+            <div class="tableContent" style=" margin-left: 80px; padding-right: 50px;">
+                <div>
+                    <p style="color: grey; font-size: 18px;">Home / Groceries</p>
+                    <h1 style="font-size: 60px; color: #8bc34a ;font-family: 'Merriweather', serif;">Groceries</h1>
+                    <p
+                        style="line-height: 25px;  padding-top: 20px; font-size: 18px; font-family: Arial, Helvetica, sans-serif;">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim, velit et luctus
+                        interdum, est quam scelerisque tellus, eget luctus mi diam vitae erat. Praesent porttitor lacus
+                        vitae dictum posuere. Suspendisse elementum metus ac dolor tincidunt, eu imperdiet nisi dictum.
+                    </p>
+                    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                        <p class="result"
+                            style="padding-top: 50px; font-size: 18px; font-family: Arial, Helvetica, sans-serif;">
+                            Showing Result</p>
+                        <select name="" id="menu"
+                            style="width:200px; height: 75px; font-size: 18px; background-color: transparent; border-color: transparent; color:gray">
+                            <option value="1">Default Sorting</option>
+                            <option value="2">Sort By Popularity</option>
+                            <option value="3">Sort by Average Rating</option>
+                            <option value="4">Sort By Latest</option>
+                            <option value="5">Sort By Price:Low to Heigh</option>
+                            <option value="6">Sort By Price:Heigh To Low</option>
+                        </select>
+                        <!-- <button type="menu" style="width: 150px; height: 40px; font-size: 15px; color: grey; text-align: left;">Default sorting</button>
      -->
+                    </div>
+                    <div>
+                        <table class="table">
+                            <tr>
+                                <td style="padding-right: 20px;">
+                                    <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/coffee-asorted-400x400.jpg"
+                                        alt="loding" width="250px" height="250px">
+                                    <div style="text-align: center; line-height: 0px;">
+                                        <p style="color: grey; font-size: 18px;">Groceries</p>
+                                        <h4>Assorted Coffee</h4>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey ;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color: grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <h5><span>$35.00</span></h5>
+                                    </div>
+                                </td>
+                                <td style="padding-right: 20px;">
+                                    <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/cashew-butter-500-600x600.jpg"
+                                        alt="loding" width="250px" height="250px">
+                                    <div style="text-align: center; line-height: 0px;">
+                                        <p style="color: grey; font-size: 18px;">Groceries</p>
+                                        <h4>Cashew Butter</h4>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <h5><del style="color: grey;">$35.00</del><span>$25.00</span></h5>
+                                    </div>
+                                </td>
+                                <td>
+                                    <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/diabetic-cookies-400x400.jpg"
+                                        alt="loding" width="250px" height="250px">
+                                    <div style="text-align: center; line-height: 0px;">
+                                        <p style="color: grey; font-size: 18px;">Groceries</p>
+                                        <h4>Diabetic Cookies</h4>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <h5><del style="color: grey;">$35.00</del><span>$25.00</span></h5>
+                                    </div>
+                                </td>
+
+
+
+                            </tr>
+
+
+                            <tr>
+                                <td style="padding-right: 20px;">
+                                    <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/organic-honey-400x400.jpg"
+                                        alt="loding" width="250px" height="250px">
+                                    <div style="text-align: center; line-height: 0px;">
+                                        <p style="color: grey; font-size: 18px;">Groceries</p>
+                                        <h4>Fresh Organic Honey</h4>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <h5><span>$34.00</span></h5>
+                                    </div>
+                                </td>
+                                <td style="padding-right: 20px;">
+                                    <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/sanitizer-400x400.jpg"
+                                        alt="loding" width="250px" height="250px">
+                                    <div style="text-align: center; line-height: 0px;">
+                                        <p style="color: grey; font-size: 18px;">Groceries</p>
+                                        <h4>Hand Sanitizer</h4>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <h5><span>$15.00</span></h5>
+                                    </div>
+                                </td>
+                                <td>
+                                    <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/red-chillies-400x400.jpg"
+                                        alt="loding" width="250px" height="250px">
+                                    <div style="text-align: center; line-height: 0px;">
+                                        <p style="color: grey; font-size: 18px;">Groceries</p>
+                                        <h4>Handpicked Red Chillies</h4>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <h5><span>$19.00</span></h5>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-right: 20px;">
+                                    <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/edible-oil-400x400.jpg"
+                                        alt="loding" width="250px" height="250px">
+                                    <div style="text-align: center; line-height: 0px;">
+                                        <p style="color: grey; font-size: 18px;">Groceries</p>
+                                        <h4>Natural Extracted Edible Oil</h4>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <h5><del style="color: grey;">$34.00</del><span>$24.00</span></h5>
+                                    </div>
+                                </td>
+                                <td style="padding-right: 20px;">
+                                    <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/face-wash-400x400.jpg"
+                                        alt="loding" width="250px" height="250px">
+                                    <div style="text-align: center; line-height: 0px;">
+                                        <p style="color: grey; font-size: 18px;">Groceries</p>
+                                        <h4>Organic Face Scrub</h4>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <h5><span>$35.00</span></h5>
+                                    </div>
+                                </td>
+                                <td>
+                                    <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/pulses-400x400.jpg"
+                                        alt="loding" width="250px" height="250px">
+                                    <div style="text-align: center; line-height:0px;">
+                                        <p style="color: grey; font-size: 18px;">Groceries</p>
+                                        <h4>Pulse Organic Farm</h4>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <h5><span>$15.00</span></h5>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr style="display: none;" id="lastTr">
+                                <td>
+                                    <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/wheat-300x300.jpg"
+                                        alt="loding" width="250px" height="250px">
+                                    <div style="text-align: center; line-height:0px;">
+                                        <p style="color: grey; font-size: 18px;">Groceries</p>
+                                        <h4>Weat From Organic Farm</h4>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                        <h5><span>$34.00</span></h5>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div style="margin-top: 50px; margin-left: 30px; padding-bottom: 90px;">
+                        <button class="changePageButton" id="changePage1">1</button>
+                        <button class="changePageButton" id="changePage2">2</button>
+                        <button class="changePageButton" id="changePage3">></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="groceries2">
+            <div class="infoAddCart"
+                style="display: none; width: 80%; position: relative; top: 50px; left: 80px; flex-direction: row; justify-content: space-between; border:1px solid #4AB866; background-color: #F4F8FF; align-items: center; font-family: Open Sans,sans-serif;">
+                <div
+                    style=" padding: 20px; font-size: 15px; background-color: #F4F8FF;  display: flex; flex-direction: row;align-items: center; height: 15px;">
+                    <div
+                        style="width:30px; height: 30px; border-radius: 50%; margin-top: 0px; margin-right: 20px; background-color: #4AB866;">
+                        <i class="fa-solid fa-check " style="color:white;position: relative; top:5px; left: 7px; "></i>
+                    </div>
+                    <p>“Assorted Coffee” has been added to your cart.</p>
+                </div>
+                <div>
+                    <input class="viewCart" type="button" value="View Cart">
+                </div>
+            </div>
+            <div class="parentDiv">
+
+
+                <div class="child1">
+                    <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/edible-oil-400x400.jpg"
+                        alt="loding" width="100%" height="100%">
+                </div>
+                <div class="child2">
+                    <h1 style="font-family:'Merriweather', serif;">Natural Extracted Edible Oil</h1>
+                    <div class="h2Div" style="display: flex; flex-direction: row; justify-content: flex-start;">
+                        <p style="font-weight: bold;"><del style="color: grey; font-weight: 1px;">$34.00</del>
+                            <span>$25.00</span>
+                        </p>
+                        <p style="padding-top: 10px; font-size: 18px;"> + Free Shipping</p>
+                    </div>
+                    <div
+                        style="width:100%;color: rgb(73, 72, 72); font-size: 17px; margin-top: -10px; line-height: 25px; font-family: Open Sans,sans-serif;">
+                        Neque porro quisquam est, qui dolore ipsum quia dolor sit amet, consectetur adipisci velit, sed
+                        quia non incidunt lores ta porro ame. numquam eius modi tempora incidunt lores ta porro ame.
+                    </div>
+                    <div class="addCartButton">
+                        <input type="Number" value="1" name="" id="productQuantity">
+                        <input type="button" name="" value="Add Cart" id="cartButton" class="button">
+                    </div>
+                    <div class="categories">Categories: <a href="">Groceries</a>, <a href="">Juice</a></div>
+
+                </div>
+            </div>
+            <div class="reviewButtonDiv">
+                <input type="button" id="descriptionbtn" class="button1" value="Description">
+                <input type="button" id="reviewbtn" class="button1" value="Review (0)">
+                <div class="descriptionbtnAction"
+                    style="  padding-top: 20px; line-height: 30px; font-size: 17px; font-family:Open Sans,sans-serif; color: rgb(87, 85, 85);">
+                    Neque porro quisquam est, qui dolore ipsum quia dolor sit amet, consectetur adipisci velit, sed quia
+                    non incidunt lores ta porro ame. numquam eius modi tempora incidunt lores ta porro ame.</div>
+                <div class="reviewButtonAction"
+                    style="display: none; padding-top: 20px; line-height: 30px; font-size: 17px; font-family:Open Sans,sans-serif; color: rgb(87, 85, 85);">
+                    There are no reviews yet.
+                    <div style="border: 1px solid rgb(116, 115, 115); margin-top: 20px; color: rgb(63, 62, 62);">
+                        <div style="display: flex; flex-direction: row; font-size: 20px; padding-left: 20px;">
+                            <p>Be the first to review </p>
+                            <p class="productNameInReview"> “Natural Extracted Edible Oil”</p>
+                        </div>
+                        <div style="margin-top: -20px; padding-left: 20px;">Your email address will not be published.
+                            Required fields are marked *</div>
+                        <div class="ratingStarDiv" style="font-size: 20px; padding-left: 20px; padding-top: 20px;">
+                            Your rating *
+                            <i class="fa-regular fa-star fa-sm" value="1"></i>
+                            <i class="fa-regular fa-star fa-sm" value="2"></i>
+                            <i class="fa-regular fa-star fa-sm" value="3"></i>
+                            <i class="fa-regular fa-star fa-sm" value="4"></i>
+                            <i class="fa-regular fa-star fa-sm" value="5"></i>
+                        </div>
+                        <div style="padding-left: 20px; padding-top: 20px; font-size: 18px;">
+                            <p>Your Review*</p>
+                            <input style="width: 98%;border: 1px solid rgb(177, 176, 176); height: 100px;" type="text"
+                                name="" id="feedBackInput">
+                            <div style="display: flex; flex-direction: row; padding-top: 20px;">
+                                <div style="width:50%; ">Name *
+                                    <input style="width:96%;border: 1px solid rgb(177, 176, 176); height: 50px;"
+                                        type="text">
+                                </div>
+                                <div style="width:50%;">Email *
+                                    <input style="width:96%;border: 1px solid rgb(177, 176, 176); height: 50px;"
+                                        type="text" name="" id="">
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding-left: 20px; padding-top: 30px;"><input type="checkbox" name="" id="">Save my
+                            name, email, and website in this browser for the next time I comment.
+                        </div>
+                        <div style="padding:20px"><input type="button" class="button" value="Submit"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="relatedProductsDiv"
+                style="font-family:'Merriweather', serif; font-weight: 10px; padding: 40px;">
+                <h1>Related Procuts</h1>
+                <table>
+                    <tr>
+                        <td style="padding-right: 20px;">
+                            <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/coffee-asorted-400x400.jpg"
+                                alt="loding" width="100%" height="100%">
+                            <div style="text-align: center; line-height: 0px;">
+                                <p style="color: grey; font-size: 18px;">Groceries</p>
+                                <h4>Assorted Coffee</h4>
+                                <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                <i class="fa-regular fa-star fa-xs" style="color:grey ;"></i>
+                                <i class="fa-regular fa-star fa-xs" style="color: grey;"></i>
+                                <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                <h5>$35.00</h5>
+                            </div>
+                        </td>
+                        <td style="padding-right: 20px;">
+                            <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/cashew-butter-500-400x400.jpg"
+                                alt="loding" width="100%" height="100%">
+                            <div style="text-align: center; line-height: 0px;">
+                                <p style="color: grey; font-size: 18px;">Groceries</p>
+                                <h4>Cashew Butter</h4>
+                                <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                <h5><del style="color: grey;">$35.00</del>$25.00</h5>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/diabetic-cookies-400x400.jpg"
+                                alt="loding" width="100%" height="100%">
+                            <div style="text-align: center; line-height: 0px;">
+                                <p style="color: grey; font-size: 18px;">Groceries</p>
+                                <h4>Diabetic Cookies</h4>
+                                <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
+                                <h5><del style="color: grey;">$35.00</del>$25.00</h5>
+                            </div>
+                        </td>
+
+
+
+                    </tr>
+
+                </table>
+            </div>
+
+        </div>
     </div>
-    <div>
-        <table >
-            <tr>
-                <td style="padding-right: 20px;" >
-                    <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/coffee-asorted-400x400.jpg" alt="loding" width="250px" height="250px" >
-                   <div style="text-align: center; line-height: 0px;">  
-                    <p style="color: grey; font-size: 18px;">Groceries</p>
-                        <h4>Assorted Coffee</h4>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey ;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color: grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <h5>$35.00</h5></div>
-                </td>
-                <td style="padding-right: 20px;">
-                    <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/cashew-butter-500-600x600.jpg" alt="loding" width="250px" height="250px" >
-                   <div style="text-align: center; line-height: 0px;">  
-                    <p style="color: grey; font-size: 18px;">Groceries</p>
-                        <h4>Cashew Butter</h4>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <h5><del style="color: grey;">$35.00</del>$25.00</h5></div>
-                </td>
-                <td >
-                    <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/diabetic-cookies-400x400.jpg" alt="loding" width="250px" height="250px" >
-                   <div style="text-align: center; line-height: 0px;">  
-                    <p style="color: grey; font-size: 18px;">Groceries</p>
-                        <h4>Diabetic Cookies</h4>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <h5><del style="color: grey">$35.00</del>$25.00</h5></div>
-                </td>
-           
-           
-            
-            </tr>
-            
-        
-            <tr >
-                <td style="padding-right: 20px;" >
-                    <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/organic-honey-400x400.jpg" alt="loding" width="250px" height="250px" >
-                   <div style="text-align: center; line-height: 0px;">  
-                    <p style="color: grey; font-size: 18px;">Groceries</p>
-                        <h4>Fresh Organic Honey</h4>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <h5>$34.00</h5></div>
-                </td>
-                <td style="padding-right: 20px;">
-                    <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/sanitizer-400x400.jpg" alt="loding" width="250px" height="250px" >
-                   <div style="text-align: center; line-height: 0px;">  
-                    <p style="color: grey; font-size: 18px;">Groceries</p>
-                        <h4>Hand Sanitizer</h4>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <h5>$15.00</h5></div>
-                </td>
-                <td >
-                    <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/red-chillies-400x400.jpg" alt="loding" width="250px" height="250px" >
-                   <div style="text-align: center; line-height: 0px;">  
-                    <p style="color: grey; font-size: 18px;">Groceries</p>
-                        <h4>Handpicked Red Chillies</h4>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <h5>$19.00</h5></div>
-                </td>
-            </tr>
-            <tr >
-                <td style="padding-right: 20px;" >
-                    <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/edible-oil-400x400.jpg" alt="loding" width="250px" height="250px" >
-                   <div style="text-align: center; line-height: 0px;">  
-                    <p style="color: grey; font-size: 18px;">Groceries</p>
-                        <h4>Natural Extracted Edible Oil</h4>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <h5><del style="color: grey;">$34.00</del>$24.00</h5></div>
-                </td>
-                <td style="padding-right: 20px;">
-                    <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/face-wash-400x400.jpg" alt="loding" width="250px" height="250px" >
-                   <div style="text-align: center; line-height: 0px;">  
-                    <p style="color: grey; font-size: 18px;">Groceries</p>
-                        <h4>Organic Face Scrub</h4>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <h5>$35.00</h5></div>
-                </td>
-                <td >
-                    <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/pulses-400x400.jpg" alt="loding" width="250px" height="250px" >
-                   <div style="text-align: center; line-heigt:0px;">  
-                    <p style="color: grey; font-size: 18px;">Groceries</p>
-                        <h4>Pulse Organic Farm</h4>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <i class="fa-regular fa-star fa-xs" style="color:grey;"></i>
-                        <h5>$15.00</h5></div>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div style="margin-top: 50px; margin-left: 30px;">
-        <button  class="changePageButton">1</button>
-        <button class="changePageButton"  >2</button>
-        <button  class="changePageButton" >></button>
+    
+    <div
+        style="background-color: #001524; display: flex; flex-direction: column; justify-content: space-between; color: white; font-family: open Sans,sans-serif; list-style-type: none; ">
+        <div class="footerDiv"
+            style="display: flex; flex-direction: row; justify-content: space-between; border-bottom-color: #F8F6F3; border-width: 2px;">
+            <div style="width:400px; display: flex; flex-direction: column; ">
+                <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2019/07/organic-store-white-logo.png"
+                    alt="" width="200px">
+                <p style="font-weight:bold; font-style:italic;">Maecenas mi justo, interdum at consectetur vel,
+                    tristique et arcu. Ut quis eros
+                    blandit, ultrices diam in, elementum ex. Suspendisse quis faucibus urna. Suspendisse pellentesque.
+                </p>
+            </div>
+            <div style="display: flex; flex-direction: column; justify-content: space-between; ">
+                <div style="display: block; justify-content: space-between;">
+
+                    <div>
+                        <h1>Quick Links</h1>
+                    </div>
+                    <div style="padding-top: 30px; padding-bottom: 30px;">
+                        <li><a href="">About</a></li>
+                        <li><a href="">Cart</a></li>
+                        <li><a href="">CheckOut</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">My account</a></li>
+                        <li><a href="">Shop</a></li>
+                    </div>
+
+                </div>
+                <div>
+                    <h1>Site Links</h1>
+
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Shipping Details</a></li>
+                    <li><a href="">Offer Coupoun</a></li>
+                    <li><a href="">Terms & Conditions</a></li>
+
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column; justify-content:flex-start;">
+                <div style="width:300px; padding-bottom: 20px;">
+                    <h1>Downlod Our Mobile App</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam gravida sollicitudin.
+                        Praesent porta enim mi, non tincidunt libero interdum sit amet.</p>
+                </div>
+                <div class="quickLinks">
+                    <h1>Quick Links</h1>
+                    <li><a href="">Know More About Us</a></li>
+                    <li><a href="">Vist Store</a></li>
+                    <li><a href="">Let's Contact</a></li>
+                    <li><a href="">Locate Stores</a></li>
+                    <div style="padding-top: 20px;"><img
+                            src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2019/06/play-store.png"
+                            alt="" width="120px">
+                        <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2019/06/app-store.png"
+                            alt="" width="120px">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footerDiv2"
+            style="display: flex; flex-direction: row; justify-content: space-between; padding: 50px;">
+            <div>
+                <h4>Copyright © 2024 | Organic Store</h4>
+            </div>
+            <div>
+                <li><a href=""><i class="fa-solid fa-leaf"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+
+
+
+            </div>
+        </div>
+
+
+
     </div>
     </div>
 
-</div>
-</div>
-<div>
 
-</div>
 </body>
+<script src="index.js">
+    document.querySelector('img').addEventListener('click', function () {
+        this.classList.toggle('zoomed');
+    })
+    const ratingStar = Array.from(document.querySelectorAll('.ratingStarDiv i'));
+    ratingStar.forEach(i => {
+        i.addEventListener('click', function () {
+            i.className = 'fa-solid fa-star fa-sm';
+        });
+    })
+    ratingStar.forEach(i => {
+        i.addEventListener('dblclick', function () {
+            i.className = 'fa-regular fa-star fa-sm';
+        });
+    })
+</script>
+<script>
+
+</script>
+
+
 </html>

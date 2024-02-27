@@ -10,32 +10,32 @@
     <title>QuikCart</title>
 </head>
 <body>
-    <div class="navigation"
-    style="font-family: Arial, Helvetica, sans-serif;">
-    
-    <div class="navdiv" >
-        <ol class="navdivChild1"  >
-            <ul><img src="organic-store-logo5.svg" alt="loding" height="auto" width="150px">
-            </ul>
-            <ul><a class="navdivChild-Child" href="">Everything</a></ul>
-            <ul><a class="navdivChild-Child" href="groceries.html">Groceries</a></ul>
-            <ul><a class="navdivChild-Child" href="">Juice</a></ul>
-        </ol>
+    <div class="navigation" style="font-family: Arial, Helvetica, sans-serif;">
+
+        <div class="navdiv">
+            <ol class="navdivChild1">
+                <ul><img src="organic-store-logo5.svg" id="mainPage" alt="loding" height="auto" width="150px">
+                </ul>
+                <ul><a class="navdivChild-Child" href="">Everything</a></ul>
+                <ul><a class="navdivChild-Child" id="groceriesBtn" href="groceries.html">Groceries</a></ul>
+                <ul><a class="navdivChild-Child" href="">Juice</a></ul>
+            </ol>
+        </div>
+        <div class="navdiv">
+            <ol class="navdivChild">
+                <ul><a class="navdivChild-Child" href="">About</a></ul>
+                <ul><a class="navdivChild-Child" href="">Contact</a></ul>
+                <ul><a class=" cartTotal" style=" color: #8bc34a; font-weight:bold; text-decoration: none; font-size: 18px;" href="">$0.00</a></ul>
+                <ul>   <div style="position: relative;"><i class="fa-solid fa-bucket fa-lg" style="color: #8bc34a;"></i>
+                    <input class="cartQuantity" type="button" value="0" style=" position: absolute;bottom: 8px; background-color: #8bc34a; border:transparent; border-radius: 50%; font-weight: bold;"></div></ul>
+                
+                   <ul><a class="navdivChild-Child" href=""><i class="fa-solid fa-user fa-lg "
+                            style="color: #000000; padding-left: 20px;"></i></a><i class="fa-solid fa-bars fa-2xl"
+                        style="color: #8bc34a;"></i></ul>
+            </ol>
+        </div>
+
     </div>
-    <div class="navdiv" >
-        <ol class="navdivChild" >
-            <ul><a class="navdivChild-Child" href="">About</a></ul>
-            <ul><a class="navdivChild-Child" href="">Contact</a></ul>
-            <ul><a class=" cartTotal"  style=" color: #8bc34a; font-weight: 8px;" href="">$0.00</a></ul>
-            <ul><a  href=""><i class="fa-solid fa-cart-shopping fa-lg"
-                        style="color:#8bc34a"></i></a><a class="navdivChild-Child" href=""><i class="fa-solid fa-user fa-lg "
-                        style="color: #000000; padding-left: 20px;"></i></a><i class="fa-solid fa-bars fa-2xl" style="color: #8bc34a;"></i></ul>
-        </ol>
-    </div>
-
-</div>
-
-
 <div class="banner">
     <div class="bannerChild1">
         <img class="bannerChild1Image"
@@ -280,7 +280,7 @@
             <i class="fa-solid fa-star fa-xs" style="color: #fab700;"></i>
             <i class="fa-solid fa-star fa-xs" style="color: #fab700;"></i>
             <i class="fa-solid fa-star fa-xs" style="color: #fab700;"></i>
-            <p style="font-family: Arial, Helvetica, sans-serif; padding: 10px; line-height: 25px;">Click edit
+            <p style=" padding: 10px; line-height: 25px;">Click edit
                 button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
                 luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
             <div style="display: inline-flex;"><img
@@ -306,7 +306,7 @@
             <i class="fa-solid fa-star fa-xs" style="color: #fab700;"></i>
             <i class="fa-solid fa-star fa-xs" style="color: #fab700;"></i>
 
-            <p style="font-family: Arial, Helvetica, sans-serif; padding: 10px; line-height: 25px;">Click edit
+            <p style="padding: 10px; line-height: 25px;">Click edit
                 button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
                 luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
             <div style="display: inline-flex;"><img
@@ -316,7 +316,118 @@
             </div>
         </div>
     </div>
-</div>
+ </div>
+    <div style="display: flex; flex-direction: row; justify-content: center; ">
+    <div class="brandsLogo">
+        <h2 style="padding-top: 15px; font-family: 'Merriweather', serif;">Featured Brands:</h2>
+        <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2021/03/logo-4.svg" alt="">
+        <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2021/03/logo-5.svg" alt="">
+        <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2021/03/logo-2.svg" alt="">
+        <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2021/03/logo-3.svg" alt="">
+        <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2021/03/logo-1.svg" alt="">
+    
+    </div>
+    </div>
+
+
+<!-- Footer -->
+
+<div
+        style="background-color: #001524; display: flex; flex-direction: column; justify-content: space-between; color: white; font-family: open Sans,sans-serif; list-style-type: none; ">
+        <div class="footerDiv"
+            style="display: flex; flex-direction: row; justify-content: space-between; border-bottom-color: #F8F6F3; border-width: 2px;">
+            <div style="width:400px; display: flex; flex-direction: column; ">
+                <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2019/07/organic-store-white-logo.png"
+                    alt="" width="200px">
+                <p style="font-weight:bold; font-style:italic;">Maecenas mi justo, interdum at consectetur vel,
+                    tristique et arcu. Ut quis eros
+                    blandit, ultrices diam in, elementum ex. Suspendisse quis faucibus urna. Suspendisse pellentesque.
+                </p>
+            </div>
+            <div style="display: flex; flex-direction: column; justify-content: space-between; ">
+                <div style="display: block; justify-content: space-between;">
+
+                    <div>
+                        <h1>Quick Links</h1>
+                    </div>
+                    <div style="padding-top: 30px; padding-bottom: 30px;">
+                        <li><a href="">About</a></li>
+                        <li><a href="">Cart</a></li>
+                        <li><a href="">CheckOut</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">My account</a></li>
+                        <li><a href="">Shop</a></li>
+                    </div>
+
+                </div>
+                <div>
+                    <h1>Site Links</h1>
+
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Shipping Details</a></li>
+                    <li><a href="">Offer Coupoun</a></li>
+                    <li><a href="">Terms & Conditions</a></li>
+
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column; justify-content:flex-start;">
+                <div style="width:300px; padding-bottom: 20px;">
+                    <h1>Downlod Our Mobile App</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam gravida sollicitudin.
+                        Praesent porta enim mi, non tincidunt libero interdum sit amet.</p>
+                </div>
+                <div class="quickLinks">
+                    <h1>Quick Links</h1>
+                    <li><a href="">Know More About Us</a></li>
+                    <li><a href="">Vist Store</a></li>
+                    <li><a href="">Let's Contact</a></li>
+                    <li><a href="">Locate Stores</a></li>
+                    <div style="padding-top: 20px;"><img
+                            src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2019/06/play-store.png"
+                            alt="" width="120px">
+                        <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2019/06/app-store.png"
+                            alt="" width="120px">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footerDiv2"
+            style="display: flex; flex-direction: row; justify-content: space-between; padding: 50px;">
+            <div>
+                <h4>Copyright © 2024 | Organic Store</h4>
+            </div>
+            <div>
+                <li><a href=""><i class="fa-solid fa-leaf"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+
+
+
+            </div>
+        </div>
+
+
+
+    </div>
 
 </body>
+<script>
+   var cartQuantity= document.querySelector('.cartQuantity');
+   var total=localStorage.getItem('cartTotal');
+   var cartTotal=document.querySelector('.cartTotal');
+   var quantity=localStorage.getItem('cartQuantity');
+   if(!quantity)
+   {
+        cartQuantity.value==0;
+        cartTotal.textContent='$0.00';
+   }
+   else
+   {
+    cartQuantity.value=quantity;
+    cartTotal.textContent=total;
+   }
+   
+</script>
 </html>

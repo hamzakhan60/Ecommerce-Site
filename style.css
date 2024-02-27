@@ -370,22 +370,32 @@ button:hover {
 }
 
 .review {
-    font-family: Arial, Helvetica, sans-serif;
-    background: rgba(221, 220, 220, 0.7) url(http://www.goeazyfacilities.com/wp-content/uploads/2020/04/leaves-free-img-300x237.png);
-    background-repeat: no-repeat;
-    background-position: left top;
-    background-size: 350px;
+    font-family: 'Merriweather', serif;
     padding-top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    position: relative;
+}
+.review::before {
+    content: ""; /* Required for pseudo-element */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #FEFEFD;
+    background-image:url(http://www.goeazyfacilities.com/wp-content/uploads/2020/04/leaves-free-img-300x237.png);
+    opacity: 0.2; /* Adjust opacity as needed (0.5 for 50% opacity) */
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 350px;
 }
 
 .reviewClass1 {
     text-align: center;
-    font-family: 'Merriweather', serif;
+    
 }
 
 .reviewClass2 {
@@ -405,6 +415,9 @@ button:hover {
     text-align: center;
     background-color: white;
     margin: 20px;
+    font-size: 20px;
+    font-family:" Open Sans,sans-serif";
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.3);
 }
 
 .reviewClass2Child2 {
@@ -489,6 +502,18 @@ button:hover {
     transition-duration: 0.5s;
 
 }
+.review{
+    padding-bottom: 100px;
+}
+.brandsLogo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 13px;
+    padding-bottom: 50px;
+    
+}
+
 
 .navdivChild-Child:hover {
     color: #8bc34a;
@@ -510,4 +535,61 @@ button:hover {
         visibility: visible;
     }
     
+}
+.footerDiv div a {
+    text-decoration: none;
+    color: rgb(255, 255, 255, 0.5);
+    line-height: 25px;
+}
+
+.footerDiv div p {
+    line-height: 25px;
+    color: rgb(255, 255, 255, 0.5);
+}
+
+.footerDiv div h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 20px;
+}
+
+.footerDiv {
+    padding: 80px;
+}
+.footerDiv div li a{
+    transition-duration: 1s;
+    transition-property: color;
+}
+.footerDiv div li a:hover{
+    color: #8bc34a;
+}
+
+.quickLinks li a {
+    color: #8bc34a;
+}
+
+.footerDiv2 div h4 {
+    color: rgb(255, 255, 255, 0.5);
+}
+
+.footerDiv2 div li {
+    display: inline-flex;
+}
+
+.footerDiv2 div li a {
+    display: inline-flex;
+    color: rgb(255, 255, 255, 0.5);
+    text-decoration: none;
+    padding: 10px;
+    transition-duration: 1s;
+    transition-property: color;
+}
+.footerDiv2 div li a:hover{
+    color: #8bc34a;
+}
+
+.footerDiv2 {
+    border-width: 1px;
+    border-top-color: rgb(255, 255, 255, 0.5);;
+
+    border-style: solid;
 }

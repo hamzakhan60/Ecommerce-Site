@@ -1,0 +1,5 @@
+font-family: 'Merriweather', serif;
+font-family:" Open Sans,sans-serif";
+pseudo element in css details...
+animation and transition topics
+position relative and absolute and z index
