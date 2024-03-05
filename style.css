@@ -10,8 +10,7 @@
     justify-content: space-evenly;
     align-items: center;
     background-attachment: scroll;
-    max-width: max-content;
-    min-width: none;
+    width: 100%;
 
 }
 
@@ -241,7 +240,8 @@ button:hover {
     line-height: 0.2px;
 }
 
-.bestSellingProductClass2Row img, .trendingProductClass2Row img {
+.bestSellingProductClass2Row img,
+.trendingProductClass2Row img {
     max-width: 90%;
     height: auto;
 }
@@ -378,16 +378,19 @@ button:hover {
     align-items: center;
     position: relative;
 }
+
 .review::before {
-    content: ""; /* Required for pseudo-element */
+    content: "";
+    /* Required for pseudo-element */
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     background-color: #FEFEFD;
-    background-image:url(http://www.goeazyfacilities.com/wp-content/uploads/2020/04/leaves-free-img-300x237.png);
-    opacity: 0.2; /* Adjust opacity as needed (0.5 for 50% opacity) */
+    background-image: url(http://www.goeazyfacilities.com/wp-content/uploads/2020/04/leaves-free-img-300x237.png);
+    opacity: 0.2;
+    /* Adjust opacity as needed (0.5 for 50% opacity) */
     background-repeat: no-repeat;
     background-position: left top;
     background-size: 350px;
@@ -395,7 +398,7 @@ button:hover {
 
 .reviewClass1 {
     text-align: center;
-    
+
 }
 
 .reviewClass2 {
@@ -416,7 +419,7 @@ button:hover {
     background-color: white;
     margin: 20px;
     font-size: 20px;
-    font-family:" Open Sans,sans-serif";
+    font-family: " Open Sans,sans-serif";
     box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.3);
 }
 
@@ -479,19 +482,62 @@ button:hover {
     }
 
 }
-.navigation {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   align-items: center;
-   width: 100%;
+
+.review {
+    padding-bottom: 100px;
 }
-.navdivChild1, .navdivChild {
-    padding-top:10px;
+
+.brandsLogo {
     display: flex;
     flex-direction: row;
-    justify-content:center;
-    align-items:center;
+    justify-content: space-evenly;
+    font-size: 13px;
+    padding-bottom: 50px;
+    flex-wrap: wrap;
+
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.navdivChild1,
+.navdivChild {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+
+
+
+
+}
+
+.navdivChild {
+    width: 90%;
+}
+
+.navdiv {
+    width: 50%;
+
+
+}
+
+.navdiv1 {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 50%;
+
 }
 
 .navdivChild-Child {
@@ -501,40 +547,53 @@ button:hover {
     transition-property: color;
     transition-duration: 0.5s;
 
-}
-.review{
-    padding-bottom: 100px;
-}
-.brandsLogo{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    font-size: 13px;
-    padding-bottom: 50px;
-    
+
 }
 
 
 .navdivChild-Child:hover {
     color: #8bc34a;
 }
-.fa-bars{
-    visibility: hidden;
+
+.fa-bars {
+    display: none;
 }
 
-.fa-cart {
-    height: 30px;
-    width: 30px;
 
-}
-@media screen and (max-width:983px) {
-    .navdivChild-Child{
-        visibility: hidden;
+
+@media screen and (max-width:973px) {
+    .navdivChild-Child {
+        display: none;
     }
-    .fa-bars, .fa-cart, .cartTotal{
-        visibility: visible;
+
+    .fa-user {
+        display: none;
     }
-    
+
+    .fa-bars {
+        display: flex;
+        padding-left: 15px;
+    }
+
+    .navdiv,
+    .navdiv1 {
+        width: 20%;
+    }
+
+    .navdivChild {
+        width: 50%;
+    }
+
+    .cartBoxChild {
+        width: 100%;
+    }
+
+
+
+    #mainPage {
+        width: 100px;
+    }
+
 }
 .footerDiv div a {
     text-decoration: none;
@@ -552,14 +611,14 @@ button:hover {
     font-size: 20px;
 }
 
-.footerDiv {
-    padding: 80px;
-}
-.footerDiv div li a{
+
+
+.footerDiv div li a {
     transition-duration: 1s;
     transition-property: color;
 }
-.footerDiv div li a:hover{
+
+.footerDiv div li a:hover {
     color: #8bc34a;
 }
 
@@ -583,13 +642,55 @@ button:hover {
     transition-duration: 1s;
     transition-property: color;
 }
-.footerDiv2 div li a:hover{
+
+.footerDiv2 div li a:hover {
     color: #8bc34a;
 }
 
 .footerDiv2 {
     border-width: 1px;
-    border-top-color: rgb(255, 255, 255, 0.5);;
+    border-top-color: rgb(255, 255, 255, 0.5);
 
+    
     border-style: solid;
 }
+.quickLinksParent2{
+   display: flex; 
+   flex-direction: column;
+    justify-content:flex-start;
+}
+.quickLinksParent1{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between;
+}
+
+@media screen and (max-width:1017px) {
+        .footerDiv {
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        .footerDiv div{
+            width: 100%;
+        }
+        .quickLinksParent1 div{
+            
+            width: 100%;
+        }
+        .quickLinksParent2 div{
+            width: 100%;
+        }
+        .quickLinksParent1,.quickLinksParent2{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            text-align:center;
+        }
+        .quickLinksParent1 h1,.quickLinkParent2 div h1{
+            text-align: center;
+        }
+        
+        
+    }

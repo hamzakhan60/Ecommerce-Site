@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Roboto:ital,wght@0,100;0,300;0,500;1,100;1,300;1,400;1,500;1,700&family=Ubuntu&display=swap"
+        rel="stylesheet">
+    <title>cart</title>
+
+</head>
+<style>
+    body {
+        background-color: #F8F6F3;
+    }
+
+    .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.navdivChild1,
+.navdivChild {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+
+
+
+
+}
+
+.navdivChild {
+    width: 90%;
+}
+
+.navdiv {
+    width: 50%;
+
+
+}
+
+.navdiv1 {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 50%;
+
+}
+
+.navdivChild-Child {
+    font-size: 15px;
+    text-decoration: none;
+    color: #000000;
+    transition-property: color;
+    transition-duration: 0.5s;
+
+
+}
+
+
+.navdivChild-Child:hover {
+    color: #8bc34a;
+}
+
+.fa-bars {
+    display: none;
+}
+
+
+
+@media screen and (max-width:973px) {
+    .navdivChild-Child {
+        display: none;
+    }
+
+    .fa-user {
+        display: none;
+    }
+
+    .fa-bars {
+        display: flex;
+        padding-left: 15px;
+    }
+
+    .navdiv,
+    .navdiv1 {
+        width: 20%;
+    }
+
+    .navdivChild {
+        width: 50%;
+    }
+
+    .cartBoxChild {
+        width: 100%;
+    }
+
+
+
+    #mainPage {
+        width: 100px;
+    }
+
+}
+
+
+    .viewCart {
+        background-color: transparent;
+        color: gray;
+        text-decoration: underline;
+        border: transparent;
+        font-size: 18px;
+        cursor: pointer;
+        margin-right: 5px;
+    }
+
+    .viewCart:hover {
+        color: black;
+    }
+
+
+    .cartBox {
+
+        display: none;
+        flex-direction: row;
+        justify-content: right;
+        align-items: center;
+        animation: slide 0.5s ease-in-out reverse;
+        position: absolute;
+        left: 875px;
+
+
+    }
+
+    @keyframes slide {
+        0% {
+            transform: translateX(0);
+
+        }
+
+        100% {
+            transform: translateX(500px);
+        }
+    }
+
+
+
+    .head {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-family: Open Sans, sans-serif;
+        border-bottom: 1px solid #DDDDDD;
+
+        font-size: 18px;
+        padding-left: 10px;
+
+    }
+
+    .cartBoxChild {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: normal;
+        font-family: Open Sans, sans-serif;
+        width: 450px;
+        height: 600px;
+
+        background-color: rgb(255, 255, 255);
+    }
+
+    .button {
+
+        width: 150px;
+        height: 3.25rem;
+        border-radius: 5px;
+        background-color: #8bc34a;
+        font-size: 15px;
+        color: white;
+        border: transparent;
+        font-weight: bolder;
+        transition-property: background-color;
+        transition-duration: 1s;
+
+    }
+
+    .button:hover {
+        background-color: #befd75;
+
+    }
+
+    .cartBoxProducts {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        /* overflow-y: scroll; */
+
+
+    }
+
+    .cartBoxChild1 {
+
+        overflow-y: scroll;
+    }
+
+    .button {
+
+        width: 150px;
+        height: 3.25rem;
+        border-radius: 5px;
+        background-color: #8bc34a;
+        font-size: 15px;
+        color: white;
+        border: transparent;
+        font-weight: bolder;
+        margin-top: 15px;
+        transition-property: background-color;
+        transition-duration: 1s;
+
+    }
+
+    .button:hover {
+        background-color: #befd75;
+
+    }
+
+    .table1 {
+        width: 90%;
+        font-family: "Open Sans", sans-serif;
+        border-spacing: 0;
+        border: 1px solid rgb(225, 222, 222);
+
+    }
+
+    .tableDiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .table1Th th {
+        background-color: rgb(255, 255, 255);
+        width: 40%;
+        font-size: 18px;
+        height: 50px;
+        font-family: "Open Sans", sans-serif;
+    }
+
+   
+
+    .imageDiv {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .imageDiv img {
+        margin-top: 10px;
+    }
+
+    input[type="number"] {
+        width: 50px;
+        height: 30px;
+        text-align: center;
+        font-size: 18px;
+        color: rgb(120, 122, 124);
+        border: none;
+    }
+
+    .productTr {
+        margin-top: 10px;
+        height: 100%;
+        
+
+    }
+    .productTr td{
+        border-bottom: 1px solid rgb(225, 222, 222);
+    }
+
+    .table1 td {
+        text-align: center;
+
+    }
+
+    .productName {
+        color: #8bc34a;
+    }
+
+    .table1 .tbody {
+        border: 1px solid rgb(206, 201, 201);
+    }
+
+    .subTotalBox td {
+        text-align: left;
+        width: 30%;
+        border-bottom: 1px solid rgb(225, 222, 222);
+    }
+
+    .totalBox td {
+        border-bottom: 1px solid rgb(225, 222, 222);
+    }
+
+
+    .footerDiv div a {
+        text-decoration: none;
+        color: rgb(255, 255, 255, 0.5);
+        line-height: 25px;
+    }
+
+    .footerDiv div p {
+        line-height: 25px;
+        color: rgb(255, 255, 255, 0.5);
+    }
+
+    .footerDiv div h1 {
+        font-family: 'Merriweather', serif;
+        font-size: 20px;
+    }
+
+   
+
+    .footerDiv div li a {
+        transition-duration: 1s;
+        transition-property: color;
+    }
+
+    .footerDiv div li a:hover {
+        color: #8bc34a;
+    }
+
+    .quickLinks li a {
+        color: #8bc34a;
+    }
+
+    .footerDiv2 div h4 {
+        color: rgb(255, 255, 255, 0.5);
+    }
+
+    .footerDiv2 div li {
+        display: inline-flex;
+    }
+
+    .footerDiv2 div li a {
+        display: inline-flex;
+        color: rgb(255, 255, 255, 0.5);
+        text-decoration: none;
+        padding: 10px;
+        transition-duration: 1s;
+        transition-property: color;
+    }
+
+    .footerDiv2 div li a:hover {
+        color: #8bc34a;
+    }
+
+    .footerDiv2 {
+        border-width: 1px;
+        border-top-color: rgb(255, 255, 255, 0.5);
+
+        
+        border-style: solid;
+    }
+    .quickLinksParent2{
+       display: flex; 
+       flex-direction: column;
+        justify-content:flex-start;
+    }
+    .quickLinksParent1{
+        display: flex; 
+        flex-direction: column; 
+        justify-content: space-between;
+    }
+    
+    @media screen and (max-width:1017px) {
+            .footerDiv {
+                flex-wrap: wrap;
+                width: 100%;
+            }
+            .footerDiv div{
+                width: 100%;
+            }
+            .quickLinksParent1 div{
+                
+                width: 100%;
+            }
+            .quickLinksParent2 div{
+                width: 100%;
+            }
+            .quickLinksParent1,.quickLinksParent2{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                
+                text-align:center;
+            }
+            .quickLinksParent1 h1,.quickLinkParent2 div h1{
+                text-align: center;
+            }
+            
+            
+           
+        }
+    .table2Div{
+        display: flex;
+         flex-direction: row; 
+         justify-content:right; 
+         width: 100%;  
+         margin-top: 50px;
+    }
+    .noProduct{
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+
+    }
+    @media screen and (max-width:469px){
+      
+        .table1{
+            width: 100%;
+            
+        }
+        .tbody{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+       
+          
+            width:180%;
+        }
+        .productTr{
+            width: 100%;
+            
+            
+        }
+        .productTr td{
+            display:flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        .table1 thead{
+            display:none;
+        }
+
+       
+    }
+
+
+
+
+
+    
+        
+    .slideMenu ul li a {
+            text-decoration: none;
+            color: #000000;
+
+            width: 40%;
+            font-size: 18px;
+
+
+
+        }
+
+        .slideMenu {
+            width: 100%;
+
+        }
+
+        .slideMenu li {
+            width: 100%;
+
+            height: 80px;
+            text-align: start;
+            border-bottom: 1px solid rgb(222, 222, 222);
+        }
+
+        .slideMenu ul {
+            width: 90%;
+
+            list-style-type: none;
+
+        }
+        .menu {
+            background-color: white;
+            display: none;
+            flex-direction: row;
+            justify-content: right;
+            align-items: center;
+            animation: slide1 0.5s ease-in-out reverse;
+            position: absolute;
+            left: 60%;
+            width: 40%;
+
+
+
+        }
+
+        @keyframes slide1 {
+            0% {
+                transform: translateX(0);
+
+            }
+
+            100% {
+                transform: translateX(500px);
+            }
+        }
+        @media screen and (max-width:1055px) {
+            .menu {
+                width: 80%;
+                left: 20%;
+            }
+
+        }
+
+       
+        
+        @media screen and (max-width:616px) {
+            .menu {
+                width: 95%;
+               
+            }
+        }
+
+
+
+        
+        .head1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-family: Open Sans, sans-serif;
+            border-bottom: 1px solid #DDDDDD;
+
+            font-size: 18px;
+            padding-left: 10px;
+
+        }
+
+        .menuChild1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: normal;
+            font-family: Open Sans, sans-serif;
+            width: 100%;
+            height: 600px;
+
+            background-color: rgb(255, 255, 255);
+        }
+        
+</style>
+
+<body>
+    <div style="position: relative;">
+            <div class="menu">
+                <div class="menuChild1">
+                    <div class="menuChild-Child">
+                        <div class="head1" >
+                            <p style="font-size: 25px;">Menu</p>
+                            <i class="fa-solid fa-xmark fa-lg"
+                                style="padding-right: 10px; color: #000000; cursor: pointer;"></i>
+                        </div>
+                        <div class="slideMenu">
+                            <ul>
+                                <li><a href="everything.html">Everything</a></li>
+                                <li><a href="juice.html">Juice</a></li>
+                                <li><a href="groceries.html">Groceries</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="account.html">Account</a></li>
+                            </ul>
+                        </div>
+    
+    
+                    </div>
+                </div>
+            </div>
+      
+    
+    
+    
+    
+
+
+
+
+
+        <div class="cartBox">
+            <div class="cartBoxChild">
+                <div class="cartBoxChild1">
+                    <div class="head">
+                        <p>Shopping Cart</p>
+                        <i class="fa-solid fa-xmark fa-lg"
+                            style="padding-right: 10px; color: #000000; cursor: pointer;"></i>
+                    </div>
+                    <div class="cartBoxProducts">
+                        <div class="cartBoxProductsChild"
+                            style="border-bottom: 1px solid #DDDDDD; height: 100px; width: 90%; align-self:center; margin-top: 20px; display:flex; flex-direction: row; justify-content:space-between;">
+                            <div style="display:flex; flex-direction: row; justify-content:left;">
+                                <div class="productImageDiv"
+                                    style="width:100px; height: 110px; padding-top: 5px; cursor: pointer;">
+                                    <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/edible-oil.jpg"
+                                        alt="" width="80%" height="70%">
+                                </div>
+                                <div class="productNameInCartBox">
+                                    <div class="productNameInCartBoxChild">
+                                        <p style="cursor: pointer;">Natural Extracted Edible Oil</p>
+                                    </div>
+                                    <div class="productDetailInCartBox"
+                                        style="display:inline-flex; margin-top: -15px;  ">
+                                        <p class="catBoxProductQuantity">1</p>
+                                        <p>x</p>
+                                        <p class="catBoxProductTotal" style="padding-left: 6px;">$25.00</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="closeBtn"
+                                style=" display: flex ; flex-direction: column; justify-content: center;">
+                                <i class="fa-solid fa-xmark fa-lg "
+                                    style="padding-right: 10px; color: #9e9c9c;cursor: pointer;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="noPrdouctInCart" style="padding-top: 150px; text-align: center;">No Product in Cart
+                    </div>
+                </div>
+                <div class="cartBoxChild2" style=" width: 100%; height: 160px; align-self: center; display: none; ">
+                    <div
+                        style="border-bottom: 1px solid  #DDDDDD; border-top:1px solid  #DDDDDD ; height: 40px;display: flex; flex-direction: row; justify-content: space-between; align-items: center; padding-left: 15px; padding-right: 15px;">
+                        <p>Subtotal:</p>
+                        <p class="subTotal">$25.00</p>
+                    </div>
+                    <div style="height: 50px; display: flex; align-items: center;justify-content: center; ">
+                        <input type="button" class="button" value="VIEW CART" id="" style="width: 95%; height: 80%;">
+                    </div>
+                    <div style="height: 50px;  display: flex; align-items: center;justify-content: center; ">
+                        <input type="button" class="button" value="Check OUT" id="" style="width: 95%; height: 80%;">
+                    </div>
+                </div>
+                <div class="continueShoopintButton"
+                    style="height: 100px;  display: flex; align-items: center;justify-content: center;">
+                    <input type="button" class="button" value="CONTINUE SHOPPING" id=""
+                        style="width: 95%; height: 50%;">
+                </div>
+            </div>
+
+
+        </div>
+        <div class="navigation" style="font-family: Arial, Helvetica, sans-serif;">
+
+            <div class="navdiv1"  >
+                 <a href="index.html"><img  id="mainPage" src="organic-store-logo5.svg" alt="loding" height="auto" 
+                    width="150px"></a>
+                 <ol class="navdivChild1" >
+                   
+                    
+                    <ul><a class="navdivChild-Child" href="everything.html">Everything</a></ul>
+                    <ul><a class="navdivChild-Child" id="groceriesBtn" href="groceries.html">Groceries</a></ul>
+                    <ul><a class="navdivChild-Child" href="juice.html">Juice</a></ul>
+                </ol>  
+            </div>
+            <div class="navdiv" >
+                 <ol class="navdivChild" >
+                    <ul><a class="navdivChild-Child" href="about.html">About</a></ul>
+                    <ul><a class="navdivChild-Child" href="contact.html">Contact</a></ul>
+                    <ul><a class=" cartTotal"
+                            style=" color: #8bc34a; font-weight:bold; text-decoration: none; font-size: 18px; cursor: pointer;">$0.00</a>
+                    </ul>
+                    <ul>
+                        <div class="cartBucket" style="position: relative; cursor: pointer;"><i
+                                class="fa-solid fa-bucket fa-lg" style="color: #8bc34a;"></i>
+                            <input class="cartQuantity" type="button" value="0"
+                                style=" position: absolute;bottom: 8px; background-color: #8bc34a; border:transparent; border-radius: 50%; font-weight: bold;">
+                        </div>
+                    </ul>
+    
+                    <ul><a class="navdivChild-Child1" href=""><i class="fa-solid fa-user fa-lg "
+                                style="color: #000000; padding-left: 20px;"></i></a><i class="fa-solid fa-bars fa-xl" style="color: #8bc34a;"></i></ul>
+                </ol>
+            </div>
+        </div>
+    
+     
+    </div>
+
+
+    <div
+        style="display: flex; flex-direction: column; justify-content: space-between; align-items:normal; width: 100%; ">
+        <div style="align-self: flex-start; padding-left: 70px;">
+            <h1>Cart</h1>
+        </div>
+        <div class="noProduct" style="height: 250px;padding-bottom: 100px;">
+        <div style="width: 90%;background-color: #8bc34a; height: 5px;"></div>
+        <div style="padding-top: 30px; font-size: 20px;"><i class="fa-regular fa-file fa-2xl" style="color: #8bc34a; padding-right: 10px;">
+        </i>Your Cart is Empty</div>
+        <input type="button" value="Return to Shopping" class="button">
+        </div>
+        <div class="tableDiv">
+            
+            <table class="table1">
+
+                <thead>
+                    <tr class="table1Th">
+                        <th></th>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody class="tbody">
+                    <tr class="productTr">
+                        <td class="imageDiv" style="padding-top: 10px; padding-bottom: 10px;"><i class="fa-solid fa-xmark fa-lg "
+                                style="padding-right: 10px; color: #9e9c9c;cursor: pointer;"></i>
+                            <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/wheat-300x300.jpg"
+                                alt="loding" width="70px" height="70px">
+                        </td>
+                        <td class="productName">Weat From Organic Farm</td>
+                        <td class="price">$34.00</td>
+                        <td class="quantity"><input type="number" name="" id="" value="1"></td>
+                        <td class="subTotalInCart">$34.00</td>
+ 
+                    </tr>
+                    <tfoot>
+                        <td colspan="4"></td>
+                        <td><input type="button" value="Update Cart" class="button"></td>
+                    </tfoot>
+                </tbody>
+
+            </table>
+        </div>
+        <div class="table2Div" >
+            <div style="width: 50%;  ">
+                <table style="border: 1px solid rgb(225, 222, 222); width: 100%;font-family: Open Sans, sans-serif;">
+
+
+                    <caption
+                        style="text-align:left;padding-top:10px;padding-bottom: 10px;  width: 100%;border: 1px solid rgb(225, 222, 222);font-weight: bold; height: 25px; font-size: 20px; background-color: white;font-family: 'Merriweather', serif;">
+                        Cart totals</caption>
+
+                    <tbody style="height: 100px; padding-left: 10px;">
+                        <tr class="subTotalBox">
+                            <td  style="text-align: center;">Subtotal</td>
+                            <td class="subTotal1">$34.00</td>
+                            <td></td>
+                        </tr>
+                        <tr class="totalBox">
+                            <td  style="text-align: center;">Total</td>
+                            <td class="total1">$34.00</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <td colspan="4"><input type="button" value="Check Out" class="button"
+                                style="width: 100%;margin-bottom: 25px;"></td>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <div 
+        style="background-color: #001524; display: flex; flex-direction: column; justify-content: space-between; color: white; font-family: open Sans,sans-serif; list-style-type: none; padding-top: 50px;">
+        <div class="footerDiv"
+            style="display: flex; flex-direction: row; justify-content: space-evenly; border-bottom-color: #F8F6F3; border-width: 2px;">
+            <div style="width:400px; display: flex; flex-direction: column; ">
+                <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2019/07/organic-store-white-logo.png"
+                    alt="" width="200px">
+                <p style="font-weight:bold; font-style:italic;">Maecenas mi justo, interdum at consectetur vel,
+                    tristique et arcu. Ut quis eros
+                    blandit, ultrices diam in, elementum ex. Suspendisse quis faucibus urna. Suspendisse pellentesque.
+                </p>
+            </div>
+            <div class="quickLinksParent1" >
+                <div style="display: block; justify-content: space-between;">
+
+                    <div>
+                        <h1>Quick Links</h1>
+                    </div>
+                    <div style="padding-top: 30px; padding-bottom: 30px;">
+                        <li><a href="">About</a></li>
+                        <li><a href="">Cart</a></li>
+                        <li><a href="">CheckOut</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">My account</a></li>
+                        <li><a href="">Shop</a></li>
+                    </div>
+
+                </div>
+                <div>
+                    <h1>Site Links</h1>
+
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Shipping Details</a></li>
+                    <li><a href="">Offer Coupoun</a></li>
+                    <li><a href="">Terms & Conditions</a></li>
+
+                </div>
+            </div>
+            <div class="quickLinksParent2">
+                <div style="width:300px; padding-bottom: 20px;">
+                    <h1>Downlod Our Mobile App</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam gravida sollicitudin.
+                        Praesent porta enim mi, non tincidunt libero interdum sit amet.</p>
+                </div>
+                <div class="quickLinks">
+                    <h1>Quick Links</h1>
+                    <li><a href="">Know More About Us</a></li>
+                    <li><a href="">Vist Store</a></li>
+                    <li><a href="">Let's Contact</a></li>
+                    <li><a href="">Locate Stores</a></li>
+                    <div style="padding-top: 20px;"><img
+                            src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2019/06/play-store.png"
+                            alt="" width="120px">
+                        <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2019/06/app-store.png"
+                            alt="" width="120px">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footerDiv2"
+            style="display: flex; flex-direction: row; justify-content: space-between; padding: 50px;">
+            <div>
+                <h4>Copyright © 2024 | Organic Store</h4>
+            </div>
+            <div>
+                <li><a href=""><i class="fa-solid fa-leaf"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+
+
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+</body>
+<script src="cart.js"></script>
+
+</html>
