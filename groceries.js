@@ -510,13 +510,13 @@ cartBucket.addEventListener('click', function () {
 function cartBox() {
     document.querySelector('.cartBox').style.display = 'flex';
     document.querySelector('.cartBucket').style.display = 'none';
-    document.querySelector('body').style.overflow = 'hidden';
+    document.querySelector('.cartBox').style.position='fixed';
     const close = document.querySelector('.head .fa-xmark');
     document.querySelector('.infoAddCart').style.display = 'none';
     close.addEventListener('click', function () {
         document.querySelector('.cartBox').style.display = 'none';
         document.querySelector('.cartBucket').style.display = 'block';
-        document.querySelector('body').style.overflow = 'scroll';
+        document.querySelector('.cartBox').style.position='relative';
     })
 
 }
@@ -536,14 +536,14 @@ menuBars.addEventListener('click',function(){
     const menu=document.querySelector('.menu');
     menu.style.display="flex";
     document.querySelector('.cartBucket').style.display = 'none';
-    document.querySelector('body').style.overflowY='hidden';
+    document.querySelector('.menu').style.position='fixed';
     
 })
 const cross=document.querySelector('.head1 .fa-xmark ');
 cross.addEventListener('click',function(){
     document.querySelector('.menu').style.display="none";
     document.querySelector('.cartBucket').style.display = 'block';
-    document.querySelector('body').style.overflowY='scroll';
+    document.querySelector('.menu').style.position='relative';
 })
 
 
