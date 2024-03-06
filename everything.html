@@ -366,13 +366,7 @@
         color: #8bc34a;
     }
 
-    .footerDiv2 {
-        border-width: 1px;
-        border-top-color: rgb(255, 255, 255, 0.5);
-
-        
-        border-style: solid;
-    }
+   
     .quickLinksParent2{
        display: flex; 
        flex-direction: column;
@@ -382,7 +376,8 @@
         display: flex; 
         flex-direction: column; 
         justify-content: space-between;
-    }
+    } 
+    
     
     @media screen and (max-width:1017px) {
             .footerDiv {
@@ -409,6 +404,9 @@
             }
             .quickLinksParent1 h1,.quickLinkParent2 div h1{
                 text-align: center;
+            }
+            .imgFooterDiv img,.imgFooterDiv p{
+                margin: auto;
             }
         }
             
@@ -901,7 +899,9 @@
 
             background-color: rgb(255, 255, 255);
         }
-        
+        /* div{
+            border: 1px solid red;
+        } */
        
     </style>
 </head>
@@ -915,7 +915,7 @@
 
 
     
-    <div style="position: relative;">
+    <div style="position: relative; width: 100%;">
 
         <div class="menu">
             <div class="menuChild1">
@@ -1001,6 +1001,7 @@
                 width="150px"></a>
              <ol class="navdivChild1" >
                
+                
                 <ul><a class="navdivChild-Child" href="everything.html">Everything</a></ul>
                 <ul><a class="navdivChild-Child" id="groceriesBtn" href="groceries.html">Groceries</a></ul>
                 <ul><a class="navdivChild-Child" href="juice.html">Juice</a></ul>
@@ -1028,10 +1029,10 @@
     </div>
 
    
-    <div class="groceriesParent" >
+    <div class="groceriesParent"  >
         <div class="groceries"
-            style="  background-color:#F8F6F3;">
-            <div class="sidelisting"
+            style="  background-color:#F8F6F3; ">
+            <div class="sidelisting" 
                 >
                 <div style="display: flex; flex-direction: row; justify-content:flex-start; align-items: flex-end;">
                     <input class="SearchProductInput" type="text" placeholder="Search Products..."
@@ -1107,11 +1108,11 @@
                 </div>
             </div>
             <div class="tableContent" >
-                <div>
-                    <p style="color: grey; font-size: 18px;">Home / Everything</p>
-                    <h1 style="font-size: 60px; color: #8bc34a ;font-family: 'Merriweather', serif;">Everything</h1>
+                <div style="width: 100%;">
+                    <p style="color: grey; font-size: 18px;">Home / Groceries</p>
+                    <h1 style="font-size:9vw; color: #8bc34a ;font-family: 'Merriweather', serif;">Everything</h1>
                     <p
-                        style="line-height: 25px;  padding-top: 20px; font-size: 18px; font-family: Arial, Helvetica, sans-serif;">
+                        style="line-height: 30px;  padding-top: 20px; font-size: 18px; font-family: Arial, Helvetica, sans-serif;">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim, velit et luctus
                         interdum, est quam scelerisque tellus, eget luctus mi diam vitae erat. Praesent porttitor lacus
                         vitae dictum posuere. Suspendisse elementum metus ac dolor tincidunt, eu imperdiet nisi dictum.
@@ -1448,10 +1449,10 @@
     </div>
     
     <div 
-    style="background-color: #001524; display: flex; flex-direction: column; justify-content: space-between; color: white; font-family: open Sans,sans-serif; list-style-type: none; padding-top: 50px;">
+    style="background-color: #001524; display: flex; flex-direction: column; justify-content: space-between; color: white; font-family: open Sans,sans-serif; list-style-type: none; padding-top: 50px; ">
     <div class="footerDiv"
-        style="display: flex; flex-direction: row; justify-content: space-evenly; border-bottom-color: #F8F6F3; border-width: 2px;">
-        <div style="width:400px; display: flex; flex-direction: column; ">
+        style="display: flex; flex-direction: row; justify-content: space-evenly; border-bottom: 1px solid rgb(222,222,222);">
+        <div class="imgFooterDiv" style="width:400px; display: flex; flex-direction: column; ">
             <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2019/07/organic-store-white-logo.png"
                 alt="" width="200px">
             <p style="font-weight:bold; font-style:italic;">Maecenas mi justo, interdum at consectetur vel,
@@ -1532,20 +1533,7 @@
 
 </body>
 <script src="groceries.js">
-    document.querySelector('img').addEventListener('click', function () {
-        this.classList.toggle('zoomed');
-    })
-    const ratingStar = Array.from(document.querySelectorAll('.ratingStarDiv i'));
-    ratingStar.forEach(i => {
-        i.addEventListener('click', function () {
-            i.className = 'fa-solid fa-star fa-sm';
-        });
-    })
-    ratingStar.forEach(i => {
-        i.addEventListener('dblclick', function () {
-            i.className = 'fa-regular fa-star fa-sm';
-        });
-    })
+    
 </script>
 <script>
 
