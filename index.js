@@ -124,19 +124,19 @@ var cartBucket=document.querySelector('.cartBucket');
 cartTotal.addEventListener('click',function(){
     cartBox.style.display='flex';
     cartBucket.style.display='none';
-    document.querySelector('body').style.overflowY='hidden';
+    document.querySelector('body').style.overflow='hidden';
 })
 cartBucket.addEventListener('click',function(){
     cartBox.style.display='flex';
     cartBucket.style.display='none';
-    document.querySelector('body').style.overflowY='hidden';
+    document.querySelector('body').style.overflow='hidden';
 })
 
 const closeCartBox=document.querySelector('.cartBoxChild1 .fa-xmark');
 closeCartBox.addEventListener('click',function(){
     cartBox.style.display='none';
     cartBucket.style.display='block';
-    document.querySelector('body').style.overflowY='scroll';
+    document.querySelector('body').style.overflow='scroll';
 });
 cartTotal.addEventListener('dblclick',function(){
     cartPage();
@@ -156,12 +156,12 @@ const menu=document.querySelector('.fa-bars');
 menu.addEventListener('click',function(){
     document.querySelector('.menu').style.display="flex";
     cartBucket.style.display='none';
-    document.querySelector('body').style.overflowY='hidden';
-    
+    document.querySelector('body').style.overflow='hidden';
+    document.querySelector('body').style.overflowX='hidden';
 })
 const cross=document.querySelector('.head1 .fa-xmark ');
 cross.addEventListener('click',function(){
     document.querySelector('.menu').style.display="none";
     cartBucket.style.display='block';
-    document.querySelector('body').style.overflowY='scroll';
+    document.querySelector('body').style.overflow='scroll';
 })
